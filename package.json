@@ -59,6 +59,6 @@
     "test-sl": "karma start karma.saucelabs.conf.js",
     "ci": "npm run test && npm run test-sl",
     "server-coverage": "istanbul cover _mocha -- -R spec",
-    "coveralls": "cat coverage/lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   }
 }
