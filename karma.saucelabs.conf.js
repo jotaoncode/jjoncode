@@ -46,7 +46,7 @@ var key,
 
     // https://docs.saucelabs.com/reference/test-configuration
     sauceLabs: {
-      testName: 'home-tests',
+      testName: 'jotaoncode-websie-tests',
       build: 'local ' + Date.now(),
       recordLogs: true,
       recordVideo: false,
