@@ -7,13 +7,9 @@ env:
   - secure: oP6Mwy+XNaNJ7XsJjWvI9sT3GLhFKrBPJv11K/tK4ZCuLCKrJl6+L4vYMovt918kSpPeDP7l+F/8MV2Xkuuh1/r4lVGpW3pvCLpb6yngOYwrvXJJpBD00xbPS337gsXMlWA5Ce3wgklyFIVAHO0nspUgXNfLSfIg+qD9iOsPi1Z+q8flKtHx1EtTVbbNoBaaC1oUO/F68LJzGMaZ9d5vlLyQUolkICekqQ/931xXh5px2nIjourayuHpB9M0WEibq4wxk93pPcXLDXQADEHZZSoKnP6LkFtgMt+QdfMaR3FgTqT4oku9ExM44cywKHcq5R2uKeXZ71qSQIOtELgp3Cm7qbMRVWHSPcu/IpKOC3dY6dnloqjs0ie7Phf4iG05AKBsWfOsaWIj3PqAfCiuoWLapbjpvAGUCXSZJMug7b1e3/xCN74m2TUvUYhAeiM+3/49HTz+8btzzFnAcAj9+I7PII7evw+eh7pA1D0kbVnCW3sYYfLSBNZ+Ll5CU17ST+G9cqTs9v/P5XOT72g5B55t5n5jwUgAqr1SroU+manazeOaX3exB9kY+NVlWrWxhZ4MfI2fBZYtQmfNaS9wxV/ZRx6khS1auwQjaFPCWGw7XztNgRX5XlfMOR0epKHqVSfiI3E1Y5cBk8kR02VW3bC7EN8GZr90s9BQNgmJRxw=
 before_script:
 - npm install
-before_install:
-- wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-- tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-- sudo rm -rf /usr/local/phantomjs/bin/phantomjs
-- sudo mv phantomjs /usr/local/phantomjs/bin/phantomjs
+- npm install -g istanbul
 script: echo Done
 install: travis_retry npm install
 after_success:
-- npm run ci
+- npm run server-coverage
 - npm run coveralls
