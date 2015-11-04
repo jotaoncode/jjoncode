@@ -1,0 +1,19 @@
+language: javascript
+addons:
+  sauce_connect: true
+env:
+  global:
+  - secure: i3jqPzsP7obk/lKe+7nd4FJnh6onp90ewJpPHj86oYlPW0uBdvMa8SePnC4ez51XD439pblQbjXXn4RYLKsokUo9yJ5m9ieHR77KE4gOEzWniT9PQCplKnbUntYTXCpQcHk5MGsJptive1Op8bn8A5/cfoFZTt51gnQevLgic6/n5ZA1mmP1boRMkNiPzPv41MBg0V729ehxIVLJgoHL5vdd9/qpJ3c045nVUNe9x1bb4N0W1+/t7vffQo3+jshfcK1RfoRLi7a/njRFmeJKDpVTBA9EPexA6vQCgpTkxJCg9636L+AvS8E0+KG9yROiZYuYJKjnXjBzy79ZMy6KUjftTOoQ9KHSrC+32q2ZnznRGb6T7P+R+MsVrbN984SIXjJSCY8n7woWlmqwoDqrC5Mlt4IhbNOTJr2Dp2btt3jFfIilaVhYGfQX8SctDWcJYfHio/PwQRmefaTcqNifrFU3pexmV1C71jI/MSlvmmzDO9Fb22rFsUnAzPlFIeWGbOqrMZQq3YZTbLInqdQzat9PQtQSuXhw3AL2IEmrnweL8cYqm8V7hvRP69YDodVfrnqHQnO1mf/0pP2ZwPRrA/xCP50giKKXw/VsVKaj5N1MYj4teft+o+smpfcSqW1ys5nvluLGU3fApuDBMMNjiLq4pM4pceFNIV/e9EMBWVo=
+  - secure: I1G77y2zgnDK0/vG4oufHMpkfo7eUP851qcqOk+FdtrzoDXdLDGTRBTHJXHhOA44BS1HrYzIi6yqi5UooDn1ELNWXQcMcSLxJifjNaQePpatDGU+B5Vx7QiHXgjrPZwc342jnWNTcWcllfWybRNz6ye4v8CdRi+UZMrzk2E3BRQaLX3Wd4xS+3V08CkZd/udDuGl7pVIEuBHUE4MiI3IE1oNW8TwDUt5WJiY71w43tsG2IBBY3idJHK3z++3fX1PXBW9V7re9s6PqQYbFEFcxgDYgE12K+Tylm0J2MT8NnHERGW5AwLqe01+8CaNQzvCEYdje4kQjoiqYbgaXyofZW5bafYkZx+6jD51G7ODKZnrTqKusuGBEPMv/c6WdYl42O1SFiEx4x2Yx3FUlk6q1G33lUazX83BdSXnFLwbMAAznwmUYr9grj8CVJXbG0ouZnRHrvSOOE8apvxWIMS76jEa5BCFTbxSwVb8xvGqidXVEZ2J0Vv7wkjxmldGtFyaYGkP89IJVCWkZly3L8AqvWKBLoL9ldj43FspHCn5l9B+0ST/PsUzH2/WoGSJXKESzsqrBpGhkScZ8UaG/jGeWtKAIx0l3qkNzFq1hZhkB/tduSbKdfIH+Ul8r1twhBpTFj6Sk8StkUCLOfsI4sTWc6DzvF+BlkyAiYM2WCC0Jmw=
+before_script:
+- npm install
+before_install:
+- wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+- tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+- sudo rm -rf /usr/local/phantomjs/bin/phantomjs
+- sudo mv phantomjs /usr/local/phantomjs/bin/phantomjs
+script: echo Done
+install: travis_retry npm install
+after_success:
+- npm run ci
+- npm run coveralls
