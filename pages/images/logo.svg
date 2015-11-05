@@ -1,0 +1,30 @@
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="jota.svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" inkscape:version="0.48.4 r9939" viewBox="0 0 312.54 428.57" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="linearGradient2996" inkscape:collect="always">
+   <stop stop-color="#d40000" offset="0"/>
+   <stop stop-color="#d40000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3010" y2="585.67" gradientUnits="userSpaceOnUse" x2="430.32" y1="589.71" x1="68.69" inkscape:collect="always">
+   <stop stop-color="#d40000" offset="0"/>
+   <stop stop-color="#d40000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3009" y2="332.12" xlink:href="#linearGradient2996" gradientUnits="userSpaceOnUse" x2="435.38" y1="337.17" x1="306.08" inkscape:collect="always"/>
+  <linearGradient id="linearGradient3011" y2="286.92" xlink:href="#linearGradient2996" gradientUnits="userSpaceOnUse" x2="359.48" gradientTransform="matrix(-0.42683859,-0.22960896,0.33082952,-0.29624311,249.49177,564.53594)" y1="708.12" x1="374.85" inkscape:collect="always"/>
+ </defs>
+ <sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="24" fit-margin-left="0" pagecolor="#ffffff" inkscape:window-height="744" inkscape:window-maximized="1" inkscape:zoom="0.9899495" inkscape:window-x="0" showgrid="false" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="159.70039" inkscape:cy="220.24614" fit-margin-top="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1366" inkscape:pageopacity="0.0" inkscape:document-units="px"/>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g inkscape:label="Layer 1" inkscape:groupmode="layer" transform="translate(-143.59704,-283.79074)">
+  <path d="m305.71,283.79,45.714,0-20,425.71-25.714,2.8571c3.7176-128.92,16.159-225.12,0-428.57z" inkscape:export-ydpi="221" sodipodi:nodetypes="ccccc" inkscape:export-filename="/home/juan/inkscape_lab/spaceship/src/jota.png" inkscape:connector-curvature="0" inkscape:export-xdpi="221" fill="url(#linearGradient3009)"/>
+  <path d="m146.78,593-2.5,1.0312c53.983,32.294,107.95,64.236,161.94,117.53l11.812-6.0938c-35.41-36.78-81.94-73.56-135.59-110.35-11.62-0.51-23.48-1.18-35.66-2.12z" inkscape:export-ydpi="221" inkscape:export-filename="/home/juan/inkscape_lab/spaceship/src/jota.png" inkscape:connector-curvature="0" inkscape:export-xdpi="221" fill="#d40000"/>
+  <path d="m143.6,592.81,18.504-21.62c98.013,16.455,196.03,5.0936,294.04,1.5272l-8.3806,12.108c-97.522,5.5612-186.71,17.376-304.16,7.9849z" inkscape:export-ydpi="221" sodipodi:nodetypes="ccccc" inkscape:export-filename="/home/juan/inkscape_lab/spaceship/src/jota.png" inkscape:connector-curvature="0" inkscape:export-xdpi="221" fill="url(#linearGradient3010)"/>
+  <path d="m308.25,321.59c-0.721-10.915-1.318-21.317-2.2188-32.906l-112.65,111.1,19.5,10.5c38.754-41.045,67.758-65.989,95.375-88.688z" inkscape:export-ydpi="221" inkscape:export-filename="/home/juan/inkscape_lab/spaceship/src/jota.png" inkscape:connector-curvature="0" inkscape:export-xdpi="221" fill="url(#linearGradient3011)"/>
+ </g>
+</svg>

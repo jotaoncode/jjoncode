@@ -1,0 +1,39 @@
+.dark-primary-color    { background: #1976D2 !important; }
+.default-primary-color { background: #2196F3 !important; }
+.light-primary-color   { background: #BBDEFB; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #607D8B; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+.header-container {
+  margin: 1%;
+}
+.logo-container {
+  text-align: right;
+
+}
+a.brand-logo > svg {
+  width: 100px;
+  vertical-align: middle;
+}
+.personal-info {
+  text-align: center;
+}
+.personal-info .fa {
+  font-size: 2em;
+  margin: 1%;
+}
+.date-new {
+  margin: 0;
+  padding: 0;
+}
+.row-new {
+  margin: 0;
+  padding: 0;
+}
+.title-content {
+  font-size: 2em;
+  border-bottom: 1px solid #B6B6B6;
+}
