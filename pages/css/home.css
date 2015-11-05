@@ -1,8 +1,4 @@
-.dark-primary-color    { background: #1976D2 !important; }
-.default-primary-color { background: #2196F3 !important; }
-.light-primary-color   { background: #BBDEFB; }
 .text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #607D8B; }
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #727272; }
 .divider-color         { border-color: #B6B6B6; }
@@ -20,10 +16,25 @@ a.brand-logo > svg {
 .personal-info {
   text-align: center;
 }
+.personal-info-value {
+  text-decoration: none;
+}
+
 .personal-info .fa {
   font-size: 2em;
   margin: 1%;
 }
+.personal-info-value i:hover{
+  color: #29b6f6;
+}
+
+.footer-content {
+  font-weight: 600;
+}
+.footer-content:hover {
+  color: #29b6f6;
+}
+
 .date-new {
   margin: 0;
   padding: 0;
