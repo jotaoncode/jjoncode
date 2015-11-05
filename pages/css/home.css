@@ -12,7 +12,6 @@
 }
 .logo-container {
   text-align: right;
-
 }
 a.brand-logo > svg {
   width: 100px;
@@ -37,3 +36,4 @@ a.brand-logo > svg {
   font-size: 2em;
   border-bottom: 1px solid #B6B6B6;
 }
+
