@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="../../node_modules/materialize-css/bin/materialize.css">
         <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../css/commons.css">
+        <link rel="stylesheet" href="../../css/prettify.css">
     </head>
     <body>
+
         <article>
             <header>
               <div class="row header-container">
@@ -95,19 +97,66 @@
                     In order to install this package go <a href="https://github.com/jrcryer/grunt-pagespeed">here</a>
                   <p>
                   </p>
+                  <p>
+                  Make sure your package.json file looks like this one
+                  </p>
+    <pre class="prettyprint language-js">
+      <code>
+  {
+    "name": "testing-page-speed",
+    "version": "0.0.1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/"
+    },
+    "dependencies": {
+      "grunt-pagespeed": "^1.0.0",
+      "load-grunt-tasks": "^0.5.0"
+    }
+  }
+      </code>
+    </pre>
                   <h5>3- Configure your Gruntfile</h5>
                   <p>
                     This is a sample on how make a grunt file configuration for pagespeed.
                   </p>
-                  <pre class="prettyprint">
-                    <code class="language-javascript">
-                      function unaFunction() {
-                        console.log('blahblah');
-                      }
-                    </code>
-                  </pre>
+    <pre class="prettyprint language-js">
+      <code>
+  //Grunt File configuration
+  module.exports = function(grunt) {
+    //Initialize configuration with page speed
+    grunt.initConfig({
+      pagespeed: {
+        options: {
+          nokey: true,
+          url: "https://jotaoncode.com/pages/optimizations/examples/low-performance/"
+        },
+        prod: {
+          options: {
+            url: "https://jotaoncode.com/pages/optimizations/examples/low-performance/",
+            locale: "en_GB",
+            threshold: 80
+          }
+        },
+        paths: {
+          options: {
+            paths: ["/page-speed-test-before.html"],
+            locale: "en_GB",
+            strategy: "mobile",
+            threshold: 80
+          }
+        }
+      }
+    });
+    require('load-grunt-tasks')(grunt);
+  };
+      </code>
+    </pre>
                   <p>
                     Complete the pagespeed configuration by setting up the page you need to test for performance, in this case I will use a sample page with low performance.
+                  </p>
+                  <p>
+                    You can choose.
                   </p>
                   <h5>4- Run Page Speed</h5>
                   <p>
@@ -191,12 +240,13 @@
         </article>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/materialize-css/bin/materialize.js"></script>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="../../js/prettify.js"></script>
     <script>
       $(document).ready(function () {
         $('.collapsible').collapsible({
           accordion: false
         });
+        prettyPrint();
       });
     </script>
     </body>
