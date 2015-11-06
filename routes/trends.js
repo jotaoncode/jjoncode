@@ -1,7 +1,8 @@
-var routing = require('./routing');
+var routing = require('../utils/routing'),
+    createPath = require('../utils/createPath');
 
 function Trends (req, res) {
-  var pathPage = __dirname + "/pages/trends/index.html";
+  var pathPage = createPath("/pages/trends/index.html");
   routing(req, res, pathPage);
 }
 module.exports = Trends;

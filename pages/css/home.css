@@ -34,7 +34,10 @@ a.brand-logo > svg {
 .footer-content:hover {
   color: #29b6f6;
 }
-
+.title-content {
+  font-size: 2em;
+  border-bottom: 1px solid #B6B6B6;
+}
 .date-new {
   margin: 0;
   padding: 0;
@@ -43,8 +46,5 @@ a.brand-logo > svg {
   margin: 0;
   padding: 0;
 }
-.title-content {
-  font-size: 2em;
-  border-bottom: 1px solid #B6B6B6;
-}
+
 

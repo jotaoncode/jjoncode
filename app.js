@@ -25,6 +25,7 @@ app.use(express.static(resources));
 
 app.get('/', routes.home);
 app.get('/home', routes.home);
+app.get('/news/optimizations/pagespeed', routes.pagespeed);
 app.get('/trends', routes.trends);
 
 /**
