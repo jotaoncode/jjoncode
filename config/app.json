@@ -1,7 +1,0 @@
-{
-  "global" : {
-    "version": "0.0.1"
-  },
-  "api_url": "api-url",
-  "i18n_url": "i18n-url"
-}

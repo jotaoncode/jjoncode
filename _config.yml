@@ -1,0 +1,20 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jota On Code
+email: garcia_juan_j@yahoo.com.ar
+description: > # this means to ignore newlines until "baseurl:"
+    Thanks for visiting, I am software engineer that loves to learn about information systems.
+    I would like to help making Internet a better place, I am open minded and always listening to a better way of doing things.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jotaoncode.com" # the base hostname & protocol for your site
+twitter_username: Juancho_1985_
+github_username:  jotaoncode
+
+# Build settings
+markdown: kramdown
