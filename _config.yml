@@ -11,8 +11,8 @@ email: garcia_juan_j@yahoo.com.ar
 description: > # this means to ignore newlines until "baseurl:"
     Thanks for visiting, I am software engineer that loves to learn about information systems.
     I would like to help making Internet a better place, I am open minded and always listening to a better way of doing things.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jotaoncode.com" # the base hostname & protocol for your site
+baseurl: "http://jotaoncode.github.io/jotaoncode-website/" # the subpath of your site, e.g. /blog
+url: "http://jotaoncode.github.io/jotaoncode-website/" # the base hostname & protocol for your site
 twitter_username: Juancho_1985_
 github_username:  jotaoncode
 
