@@ -43,11 +43,11 @@
           </h1>
         </a>
         <p class="personal-info">
-          <a href="#" class="personal-info-value"><i class="fa fa-home secondary-text-color"></i></a>
-          <a href="#" class="personal-info-value"><i class="fa fa-github secondary-text-color"></i></a>
-          <a href="#" class="personal-info-value"><i class="fa fa-linkedin secondary-text-color"></i></a>
-          <a href="#" class="personal-info-value"><i class="fa fa-facebook secondary-text-color"></i></a>
-          <a href="#" class="personal-info-value"><i class="fa fa-envelope secondary-text-color"></i></a>
+          <a href="{{ "/" | prepend: site.baseurl }}" class="personal-info-value"><i class="fa fa-home secondary-text-color"></i></a>
+          <a href="{{ site.github }}" class="personal-info-value"><i class="fa fa-github secondary-text-color"></i></a>
+          <a href="{{ site.linkedin }}" class="personal-info-value"><i class="fa fa-linkedin secondary-text-color"></i></a>
+          <a href="{{ site.twitter }}" class="personal-info-value"><i class="fa fa-twitter secondary-text-color"></i></a>
+          <a href="mailto:{{ site.email }}" class="personal-info-value"><i class="fa fa-envelope secondary-text-color"></i></a>
          </p>
       </div>
     </div>
