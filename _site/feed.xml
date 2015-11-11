@@ -4,10 +4,10 @@
     <title>Jota On Code</title>
     <description>Thanks for visiting, I am software engineer that loves to learn about information systems. I would like to help making Internet a better place, I am open minded and always listening to a better way of doing things.
 </description>
-    <link>http://jotaoncode.com/</link>
-    <atom:link href="http://jotaoncode.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2015 16:10:17 -0300</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 16:10:17 -0300</lastBuildDate>
+    <link>http://jotaoncode.github.io/jotaoncode-website//jotaoncode-website/</link>
+    <atom:link href="http://jotaoncode.github.io/jotaoncode-website//jotaoncode-website/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 11 Nov 2015 20:23:30 -0300</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 20:23:30 -0300</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Mon, 09 Nov 2015 14:08:02 -0300</pubDate>
-        <link>http://jotaoncode.com/jekyll/update/2015/11/09/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://jotaoncode.com/jekyll/update/2015/11/09/welcome-to-jekyll.html</guid>
+        <link>http://jotaoncode.github.io/jotaoncode-website//jotaoncode-website/jekyll/update/2015/11/09/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://jotaoncode.github.io/jotaoncode-website//jotaoncode-website/jekyll/update/2015/11/09/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

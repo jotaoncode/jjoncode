@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am Juan José García, Information Systems Engineer, and I love to learn all the time new things, also teach some of them when I have the chance.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Always humble, grateful and open minded at work, in this oportunity I am sharing my knowledge with any one how wants or needs some of this material.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I was born in Argentina the 25th of October 1985. And this is blog is an index for those things I enjoy to do :), have a good stay.
+
