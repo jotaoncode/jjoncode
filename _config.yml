@@ -15,6 +15,7 @@ baseurl: "/jotaoncode-website" # the subpath of your site, e.g. /blog
 url: "http://jotaoncode.github.io/jotaoncode-website/" # the base hostname & protocol for your site
 twitter: "https://twitter.com/Juancho_1985_"
 linkedin: "https://ar.linkedin.com/in/garciajuanjose"
+stackoverflow: "http://careers.stackoverflow.com/juangarcia"
 github:  "https://github.com/jotaoncode"
 
 # Build settings
