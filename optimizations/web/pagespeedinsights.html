@@ -1,14 +1,13 @@
 ---
 layout: page
-title: Page Speed Insights
-permalink: /optimizations/web/
 ---
 <article>
     <section class="content-container">
       <div class="row">
         <div class="col l12 m12 s12">
+          <h2 class="primary-text-color" >Page Speed Insights</h2>
           <h3 class="primary-text-color title-content divider-color">
-            Measure with Page Speed Insights
+            Measure
           </h3>
           <p>
             We will look at how to measure with Page Speed Insights and this page, in a very simple example.
@@ -167,6 +166,30 @@ module.exports = function(grunt) {
           </p>
         </div>
       </div>
+    </section>
+    <section>
+      <div id="disqus_thread"></div>
+        <script>
+        /**
+        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//jotaoncode.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </section>
 </article>
 
