@@ -282,6 +282,20 @@ a.brand-logo > svg {
   font-size: 2em;
   margin: 1%;
 }
+@media only screen and (max-width : 600px) {
+  .personal-info .fa {
+    font-size: 1em;
+    margin: 1%;
+  }
+
+}
+@include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
 .personal-info-value i:hover{
   color: #29b6f6;
 }
