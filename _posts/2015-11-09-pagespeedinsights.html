@@ -198,21 +198,48 @@ module.exports = function(grunt) {
           <p>
             So we can say the following:
           </p>
-          <p>
-            CSS improved %
-          </p>
-          <p>
-            JS improved %
-          </p>
-          <p>
-            Images improved %
-          </p>
-          <p>
-            Calls improved %
-          </p>
-          <p>
-            Time improved %
-          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Concept</th>
+                <th>Before</th>
+                <th>After</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Images</td>
+              <td>2.38 MB</td>
+              <td>62.62 KB</td>
+            </tr>
+            <tr>
+              <td>Javascript *</td>
+              <td>491.36 KB</td>
+              <td>248.38 KB</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>197.68 KB</td>
+              <td>145.55 KB</td>
+            </tr>
+            <tr>
+              <td>HTML *</td>
+              <td>1.82 KB</td>
+              <td>254.22 KB</td>
+            </tr>
+            <tr>
+              <td>Resources</td>
+              <td>17</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Time</td>
+              <td>4.699 s</td>
+              <td>0.759 s</td>
+            </tr>
+            </tbody>
+          </table>
+          <p>* The values of Javascript is not in report as it is inline for the final version, in order to not make another call to the server for this resource. So the HTML increment the size too.</p>
           <h3>
             Conclusion:
           </h3>
