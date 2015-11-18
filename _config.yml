@@ -19,8 +19,12 @@ stackoverflow: "http://careers.stackoverflow.com/juangarcia"
 github:  "https://github.com/jotaoncode"
 
 # Permalinks
-
 permalink: /blog/:categories/:year/:month/:day/:title/
+
+#gem:
+#  - octopress-debugger
 
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
