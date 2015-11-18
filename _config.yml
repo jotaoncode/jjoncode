@@ -18,5 +18,9 @@ linkedin: "https://ar.linkedin.com/in/garciajuanjose"
 stackoverflow: "http://careers.stackoverflow.com/juangarcia"
 github:  "https://github.com/jotaoncode"
 
+# Permalinks
+
+permalink: /blog/:categories/:year/:month/:day/:title/
+
 # Build settings
 markdown: kramdown
