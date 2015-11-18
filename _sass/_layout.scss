@@ -101,6 +101,8 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    width: 100%;
+    display: inline-block;
 }
 
 .footer-heading {
@@ -351,10 +353,16 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .ads-left {
   width: 300px;
   float: left;
+  display: none;
 }
 .ads-right {
   width: 300px;
   float: right;
+}
+.ads-horizontal {
+  height: 90px;
+  width: 728px;
+  margin: 0 auto;
 }
 .page-content {
   width: calc(100% - 620px);
@@ -367,5 +375,18 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   .page-content {
     width: 100%;
     padding: 5%;
+  }
+}
+@media only screen and (max-width : 1399px) and (min-width: 601px){
+  .page-content {
+    width: calc(100% - 310px);
+    padding: 2%;
+  }
+}
+@media only screen and (min-width : 1400px) {
+  .ads-left {
+    width: 300px;
+    float: left;
+    display: block;
   }
 }
