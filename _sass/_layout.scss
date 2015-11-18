@@ -373,7 +373,44 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   float: left;
 }
 
+.card-container {
+  width: 80%;
+  padding: 1%;
+  margin: 0 auto;
+}
+.container-bio {
+  margin: 0 auto;
+}
+.container-bio-description {
+  margin: 0 auto;
+  width: 80%;
+  padding: 1%;
+}
+.bio-image-container {
+  float: left;
+  width: 20%;
+}
+.bio-basic-info-container {
+  width: 80%;
+  margin-left: 20%;
+  padding: 1%;
+}
 
+.bio-image {
+  border-radius: 50%;
+}
+.page-title {
+  text-align: center;
+}
+@media only screen and (max-width : 700px) {
+  .bio-image-container {
+    width: 100%;
+  }
+  .bio-basic-info-container {
+    width: 100%;
+    margin: 0;
+  }
+}
 @media only screen and (max-width : 900px) {
   .page-content {
     width: 100%;
