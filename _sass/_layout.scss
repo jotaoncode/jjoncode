@@ -348,3 +348,24 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   pre .atn, code .atn { color: #404 }
   pre .atv, code .atv { color: #060 }
 }
+.ads-left {
+  width: 300px;
+  float: left;
+}
+.ads-right {
+  width: 300px;
+  float: right;
+}
+.page-content {
+  width: calc(100% - 620px);
+  margin: 0;
+  padding: 1%;
+  float: left;
+}
+
+@media only screen and (max-width : 600px) {
+  .page-content {
+    width: 100%;
+    padding: 5%;
+  }
+}

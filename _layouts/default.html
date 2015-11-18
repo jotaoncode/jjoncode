@@ -4,13 +4,17 @@
   {% include head.html %}
 
   <body>
-
     {% include header.html %}
 
+    <div class="ads-left hide-on-med-and-down">
+      {% include adsense-right.html %}
+    </div>
     <div class="container page-content">
         {{ content }}
     </div>
-
+    <div class="ads-right hide-on-med-and-down">
+      {% include adsense-right.html %}
+    </div>
     {% include footer.html %}
 
     {% include jsLinks.html %}
