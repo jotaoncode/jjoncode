@@ -14,7 +14,7 @@ layout: default-no-ad
         <div class="collapsible-header">
           {{ post.title }}
           <a href="{{ post.url }}" class="primary-text-color">
-            <i class="fa fa-external-link"></i>
+            <i class="fa fa-book"></i>
           </a>
           <small class="date-new primary-text-color right">
           {{ post.date | date: "%b %-d, %Y" }}
@@ -39,10 +39,13 @@ layout: default-no-ad
         <div class="collapsible-header">
           {{ post.title }}
           <a href="{{ post.url }}" class="primary-text-color">
-            <i class="fa fa-external-link"></i>
+            <i class="fa fa-book"></i>
           </a>
-          <a href="{{ post.url }}" class="primary-text-color">
+          <a href="{{ post.github }}" class="primary-text-color">
             <i class="fa fa-github"></i>
+          </a>
+          <a href="{{ post.external }}" class="primary-text-color">
+            <i class="fa fa-external-link"></i>
           </a>
           <small class="date-new primary-text-color right">
           {{ post.date | date: "%b %-d, %Y" }}

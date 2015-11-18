@@ -371,9 +371,9 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   margin: 0 auto;
 }
 .page-content {
-  width: calc(100% - 620px);
-  margin: 0 auto;
+  width: calc(100% - 310px);
   padding: 1%;
+  margin: 10px;
 }
 
 .card-container {
@@ -426,20 +426,21 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
 }
 
-@media only screen and (max-width : 1200px) and (min-width: 901px){
-  .page-content {
-    width: calc(100% - 310px);
-    padding: 2%;
-  }
+@media only screen and (max-width : 1400px) and (min-width: 901px){
   .ads-right {
     display: block;
   }
 }
-@media only screen and (min-width : 1201px) {
+@media only screen and (min-width : 1401px) {
   .ads-left {
     display: block;
   }
   .ads-right {
     display: block;
+  }
+  .page-content {
+    width: calc(100% - 620px);
+    margin: 0 auto;
+    padding: 5%;
   }
 }
