@@ -9,8 +9,8 @@
 title: Jota On Code
 email: garcia_juan_j@yahoo.com.ar
 description: > # this means to ignore newlines until "baseurl:"
-    Thanks for visiting, I am software engineer that loves to learn about information systems.
-    I would like to help making Internet a better place, I am open minded and always listening to a better way of doing things.
+    Thanks for visiting, I am an Information Systems Engineer that loves to learn new technologies, open minded, gratefull and humble I would like to help making internet a better place.
+
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://jotaoncode.com" # the base hostname & protocol for your site
 twitter: "https://twitter.com/Juancho_1985_"
