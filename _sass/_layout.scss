@@ -430,6 +430,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   .ads-right {
     display: block;
   }
+  .ads-left {
+    display: block;
+    position: absolute;
+    top: 810px;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    left: auto;
+  }
 }
 @media only screen and (min-width : 1401px) {
   .ads-left {
