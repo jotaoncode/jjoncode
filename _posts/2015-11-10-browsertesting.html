@@ -1,7 +1,7 @@
 ---
 layout: post
 category: news
-github: github.com/jotaoncode/web-istanbul
+github: https://github.com/jotaoncode/web-istanbul
 description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
 ---
 <article>
@@ -17,6 +17,7 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
           </h4>
           <p>
             We will see a bit of configuration from karma and an example of a working enviroment for testing and coverage.
+            For impatients  you can find the repo <a href="https://github.com/jotaoncode/web-istanbul">here</a>
           </p>
           <h4>
             Pre requisites
@@ -24,6 +25,131 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
           <p>
             In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
           </p>
+          <h4>
+            Defining Karma Reporters
+          </h4>
+          <p>
+            We will define what we want from Karma, and thats going to be with this line:
+          </p>
+{% highlight javascript %}
+reporters: ['spec', 'coverage']
+{% endhighlight %}
+          <p>
+          So we are going to give a report on coverage and run spec too. So in order to do so we need some dependencies in package json those are:
+          </p>
+{% highlight javascript %}
+karma-spec-reporter,
+karma-coverage
+{% endhighlight %}
+        <h4>
+          Defining Karma Frameworks
+        </h4>
+        <p>
+        Then we can say which frameworks we will be using to karma.
+        </p>
+{% highlight javascript %}
+frameworks: [
+  'mocha',
+  'browserify'
+],
+{% endhighlight %}
+        <p>
+        You can see that we are using mocha for runing those tests, and browserify to make a bundle on what we need to test.
+        </p>
+        <h4>
+          Files to test.
+        </h4>
+        <p>
+        What are we going to test?, we can define a regular expression to say where are the source files of our application and where are the tests.
+        </p>
+{% highlight javascript %}
+files: [
+  'src/**/*.js',
+  'test/*.js'
+],
+{% endhighlight %}
+        <h4>
+          Preprocess some files
+        </h4>
+        <p>
+        We need to define what we will be running before processing all the data with karma.
+        </p>
+{% highlight javascript %}
+  'src/**/*.js': ['browserify', 'coverage'],
+  'test/**/*.js': ['browserify']
+{% endhighlight %}
+        <p>
+        In this case we are saying, execute browserify to bundle my source code <strong>then</strong> execute coverage.
+        </p>
+        <p>
+        Then we say execute browserify on test.
+        </p>
+        <h4>
+          Coverage Reporter
+        </h4>
+        <p>
+        In this case you can specify some operations for those reports you defined before. You can add some customs and say how to do somethings to karma for those reports.
+        </p>
+{% highlight javascript %}
+coverageReporter: {
+  reporters: [
+    { type: 'html' },
+    { type: 'text' },
+    { type: 'lcovonly' }
+  ],
+  instrumenterOptions: {
+    istanbul: {
+      noCompact: true
+    }
+  },
+  instrumenter: {
+    'test/**/*.js': 'istanbul'
+  },
+  includeAllSources: true
+},
+{% endhighlight %}
+        <p>
+        In this case we are saying that we want results in <strong>html, text, lcovonly</strong>. We are saying we will use Istanbul as an instrumenter to produce this coverage. lcov is the result the coverage, it is information formatted in a particular way so you can read from this lcov in order to produce a report in the way you need with different tools. So we can say that you can use other libraries that are not Istanbul and they may produce lcov information too.
+        </p>
+        <h4>
+          Browserify transformations
+        </h4>
+        <p>
+        As we have defined browserify early we may need to define how to make some transformations for our bundles.
+        </p>
+{% highlight javascript %}
+browserify: {
+  debug: true,
+  transform: [ 'brfs', istanbul({
+    ignore: ['**/node_modules/**', '**/test/**']
+  })]
+}
+{% endhighlight %}
+        <p>
+        So we are saying run brfs, this is a plugin that will inline the reading of files into bundles, and <strong>then</strong> istanbul will actually work with the coverage ignoring node modules and tests.
+        </p>
+        <h4>
+          Defining your browser
+        </h4>
+        <p>
+        You can define your browser for karma like this:
+        </p>
+{% highlight javascript %}
+    browsers: [
+      'PhantomJS2'//, 'Firefox'
+    ],
+{% endhighlight %}
+        <p>
+        PhantomJS2 is a headless browser that avoids having so much heavy work when running tests in browser.
+        You can see compatibility table for PhantomJS2 in <a href="http://kangax.github.io/compat-table/es5/#phantom">here</a>
+        </p>
+        <h3>
+          Running karma
+        </h3>
+        <p>
+        Finally we run karma with this line:
+        </p>
+        <code>rm -r coverage && karma start karma.local.conf.js</code>
         </div>
       </div>
       <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
