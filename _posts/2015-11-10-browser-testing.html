@@ -158,6 +158,17 @@ browserify: {
         </p>
         <code>rm -r coverage && karma start karma.local.conf.js</code>
         </div>
+        <p>The results on this coverage are in my terminal are this ones:</p>
+        <img src="{{ "images/npm-test-results.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+        <p>The results on this coverage in my browser are:</p>
+        <img src="{{ "images/coverage-report.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+        <p>We can explore those results a bit more and find the lines not covered</p>
+        <img src="{{ "images/index-coverage.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+        <h3>
+          Conclusion
+        </h3>
+        <p>Now we know how to run our testing with coverage in a headless browser. There are several reasons why testing is important, soon we will see a nice approach in this same project with Continuous Integration, Github and for multiple platforms.</p>
+        <p>Hope you enjoy this little sample, the repo with the code is <a href="https://github.com/jotaoncode/web-istanbul">here</a></p>
       </div>
       <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
     </section>
