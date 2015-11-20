@@ -4,33 +4,33 @@ category: news
 date: 2015-11-08 10:01:46-0700
 description: About Jota On Code
 ---
-<article>
-    <section class="content-container">
+<article itemscope itemtype="http://schema.org/Article">
+    <section class="content-container" itemprop="articleSection">
       <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
 
         <div class="title-container">
-          <h2 class="primary-text-color page-title" >About Jota On Code</h2>
+          <h2 class="primary-text-color page-title" itemprop="headline">About Jota On Code</h2>
         </div>
 
       <div class="card-container blue lighten-2 z-depth-3">
         <div class="bio-image-container">
-          <img src="{{ "images/me.png" | prepend: site.baseurl }}" class="bio-image" alt="This is a foto a of me.">
+          <img src="{{ "images/me.png" | prepend: site.baseurl }}" class="bio-image" alt="This is a foto a of me." itemprop="contentUrl">
         </div>
-        <div class="bio-basic-info-container">
-          <p>Juan José García</p>
-          <p>Buenos Aires, Argentina</p>
-          <p>Information Systems Engineer</p>
+        <div class="bio-basic-info-container" itemprop="description">
+          <p itemprop="author">Juan José García</p>
+          <p itemprop="contentLocation">Buenos Aires, Argentina</p>
+          <p itemprop="description">Information Systems Engineer</p>
         </div>
       </div>
       <br/>
-      <div class="container-bio-description blue lighten-5">
-          <p>
+      <div class="container-bio-description blue lighten-5" itemprop="articleBody">
+          <p itemprop="text">
 I am Juan José García, Information Systems Engineer, and I love to learn all the time new things, also teach some of them when I have the chance.
           </p>
-          <p>
+          <p itemprop="text">
 In this oportunity I am sharing my knowledge with any one who wants or needs some of this material.
           </p>
-          <p>
+          <p itemprop="text">
 I was born in Argentina the 25th of October 1985. And this is blog is a small index for those things I enjoy to do <i class="fa fa-smile-o"></i>, have a good stay.
           </p>
       </div>
