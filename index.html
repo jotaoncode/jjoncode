@@ -14,7 +14,7 @@ layout: default-no-ad
           <span itemprop="headline">
             {{ post.title }}
           </span>
-          <a href="{{ post.url }}" class="primary-text-color" itemprop="url">
+          <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
             <i class="fa fa-book"></i>
           </a>
           <small class="date-new primary-text-color right" itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">
