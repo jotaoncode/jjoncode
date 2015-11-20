@@ -6,7 +6,10 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
-  <div class="ads-horizontal">
+  <div class="ads-horizontal" id="ad-horizontal">
     {% include adsense-horizontal.html %}
+  </div>
+  <div class="ads-horizontal-mobile" id="ad-mobile">
+    {% include adsense-mobile.html %}
   </div>
 </article>

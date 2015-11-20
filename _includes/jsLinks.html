@@ -2,10 +2,24 @@
   <script type="text/javascript" src="{{ "js/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "js/materialize.js" | prepend: site.baseurl }}"></script>
   <script>
+    function removeAdListener() {
+      $('.ad-close').click(function (ev) {
+        var target = $(ev.currentTarget).data('target');
+        ev.preventDefault();
+        $('#' + target).hide();
+      });
+    }
+    function stopPropagationOnLinks() {
+      $('.stop-propagation').click(function (ev) {
+        ev.stopPropagation();
+      });
+    }
     $(document).ready(function () {
       $('.collapsible').collapsible({
         accordion: false
       });
+      removeAdListener();
+      stopPropagationOnLinks();
     });
   </script>
   {% include google-analytics.html %}

@@ -1,7 +1,6 @@
 ---
 layout: default-no-ad
 ---
-
 <div class="row">
   <h3>Still working on this, it will be finished 21st of November 2015 in order to start giving some posts</h3>
   <div class="col l6 m12 s12">
@@ -11,12 +10,14 @@ layout: default-no-ad
     <ul class="collapsible" data-collapsible="expandable">
       {% for post in site.categories.news %}
       <li>
-        <div class="collapsible-header">
-          {{ post.title }}
-          <a href="{{ post.url }}" class="primary-text-color">
+        <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
+          <span itemprop="headline">
+            {{ post.title }}
+          </span>
+          <a href="{{ post.url }}" class="primary-text-color" itemprop="url">
             <i class="fa fa-book"></i>
           </a>
-          <small class="date-new primary-text-color right">
+          <small class="date-new primary-text-color right" itemprop="datePublished" content="{{ post.date | date: "%b %-d, %Y" }}">
           {{ post.date | date: "%b %-d, %Y" }}
           </small>
         </div>
@@ -36,24 +37,25 @@ layout: default-no-ad
     <ul class="collapsible" data-collapsible="expandable">
       {% for post in site.categories.projects %}
       <li>
-        <div class="collapsible-header">
-          {{ post.title }}
-          <a href="{{ post.url }}" class="primary-text-color">
+        <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
+          <span itemprop="headline">
+            {{ post.title }}
+          </span>
+          <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
             <i class="fa fa-book"></i>
           </a>
-          <a href="{{ post.github }}" class="primary-text-color" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="{{ post.external }}" class="primary-text-color" target="_blank">
+          <a href="{{ post.external }}" class="primary-text-color stop-propagation" target="_blank">
             <i class="fa fa-external-link"></i>
           </a>
-          <small class="date-new primary-text-color right">
-          {{ post.date | date: "%b %-d, %Y" }}
-          </small>
         </div>
         <div class="collapsible-body blue-grey lighten-5">
           <p class="primary-text-color" >
             {{ post.description }}
+          </p>
+          <p class="project-link-index">
+            <a href="{{ post.github }}" class="primary-text-color project-link stop-propagation" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
           </p>
         </div>
       </li>
@@ -63,5 +65,4 @@ layout: default-no-ad
   <!-- 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   -->
-
 </div>
