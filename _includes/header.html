@@ -1,5 +1,4 @@
-<header class="site-header">
-
+<header class="site-header" itemscope itemtype="http://schema.org/Person">
   <div class="container page-container">
     <div class="row header-container">
       <div class="col s12 m12 l6 logo-container">
@@ -37,17 +36,17 @@
         </a>
       </div>
       <div class="col s12 m12 l6">
-        <a class="site-title hide-on-med-and-down" href="{{ site.url }}/">
-          <h1 class="primary-text-color head-title">
+        <a class="site-title hide-on-med-and-down" href="{{ site.url }}/" itemprop="url">
+          <h1 class="primary-text-color head-title" itemprop="name">
             {{ site.title }}
           </h1>
         </a>
-        <p class="personal-info">
-          <a href="{{ site.github }}" class="personal-info-value"><i class="fa fa-github secondary-text-color"></i></a>
-          <a href="{{ site.stackoverflow }}" class="personal-info-value"><i class="fa fa-stack-overflow secondary-text-color"></i></a>
-          <a href="{{ site.linkedin }}" class="personal-info-value"><i class="fa fa-linkedin secondary-text-color"></i></a>
-          <a href="{{ site.twitter }}" class="personal-info-value"><i class="fa fa-twitter secondary-text-color"></i></a>
-          <a href="mailto:{{ site.email }}" class="personal-info-value"><i class="fa fa-envelope secondary-text-color"></i></a>
+        <p class="personal-info" itemprop="description">
+          <a href="{{ site.github }}" itemprop="url" class="personal-info-value"><i class="fa fa-github secondary-text-color"></i></a>
+          <a href="{{ site.stackoverflow }}" itemprop="url" class="personal-info-value"><i class="fa fa-stack-overflow secondary-text-color"></i></a>
+          <a href="{{ site.linkedin }}" itemprop="url" class="personal-info-value"><i class="fa fa-linkedin secondary-text-color"></i></a>
+          <a href="{{ site.twitter }}" itemprop="url" class="personal-info-value"><i class="fa fa-twitter secondary-text-color"></i></a>
+          <a href="mailto:{{ site.email }}" itemprop="mail" class="personal-info-value"><i class="fa fa-envelope secondary-text-color"></i></a>
          </p>
       </div>
     </div>
