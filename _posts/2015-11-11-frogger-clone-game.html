@@ -7,13 +7,13 @@ github: https://github.com/jotaoncode/frontend-nanodegree-arcade-game
 external: http://jotaoncode.herokuapp.com/frogger-clone
 description: This is a game created for Udacity Front End Nanodegree. Assets and render engine provided from Udacity, enemies, player and other logics by me.
 ---
-<h2 class="primary-text-color title-content divider-color">
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="row">
     <div class="col l4 m4 s4">
       <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
     </div>
-    <div class="col l4 m4 s4">
-      <span class="center">
+    <div class="col l4 m4 s4 center">
+      <span>
         Frogger Game Clone
       </span>
     </div>
@@ -21,9 +21,12 @@ description: This is a game created for Udacity Front End Nanodegree. Assets and
     </div>
   </div>
 </h2>
-<section class="content-container">
-  <div class="row">
+<section class="content-container" itemprop="articleBody">
+  <section class="row" itemprop="articleSection">
     <div class="col l12 m12 s12">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
       <p>
         For Udacity Front End Nanodegree we needed to build a frogger clone game.
       </p>
@@ -34,14 +37,24 @@ description: This is a game created for Udacity Front End Nanodegree. Assets and
         Also we needed to make it work in 60 fps creating those objects needed. In order to achieve this we need to work with prototype so we can actually create what the player or the enemy without having a great waste on memory.
       </p>
       <p>
-        The final results are very nice. This is the picture of it, and you can play with it in <a href="http://jotaoncode.herokuapp.com/frogger-clone/">here</a>. In the future I will actually improve this game a bit more.
+        The final results are very nice. This is the picture of it, and you can play with it in <a href="http://jotaoncode.herokuapp.com/frogger-clone/">here</a>. In the future I will improve this game a bit more.
       </p>
       <img src="{{ "images/FroggerClone.png" | prepend: site.baseurl }}" alt="How arcade frogger clone game looks like">
       <p>
         The repo for this game is here is <a href="https://github.com/jotaoncode/frontend-nanodegree-arcade-game">here</a>
       </p>
     </div>
-  </div>
+  </section>
+  <section class="row" itemprop="articleSection">
+    <div class="col l12 m12 s12">
+      <h4 itemprop="name">
+        Conclusion
+      </h4>
+      <p>
+        We can create a little game without any framework only using canvas, but it is important to be carefull with expensive operations during the animation. Also it is nice to see the correct use of prototype and to check how to inherit what I need to not produce that expensive operation during the creation of the elements that involves the game.
+      </p>
+    </div>
+  </section>
   <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
 </section>
 

@@ -6,7 +6,7 @@ headline: About
 date: 2015-11-08 10:01:46-0700
 description: About Jota On Code
 ---
-<h2 class="primary-text-color title-content divider-color">
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="row">
     <div class="col l4 m4 s4">
       <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
@@ -20,8 +20,8 @@ description: About Jota On Code
     </div>
   </div>
 </h2>
-<section class="content-container" itemprop="articleSection">
-  <div class="card-container blue lighten-2 z-depth-3">
+<section class="content-container" itemprop="articleBody">
+  <section class="card-container blue lighten-2 z-depth-3" itemprop="description">
     <div class="bio-image-container">
       <img src="{{ "images/me.png" | prepend: site.baseurl }}" class="bio-image" alt="This is a foto a of me." itemprop="contentUrl">
     </div>
@@ -30,16 +30,16 @@ description: About Jota On Code
       <p itemprop="contentLocation">Buenos Aires, Argentina</p>
       <p itemprop="description">Information Systems Engineer</p>
     </div>
-  </div>
+  </section>
   <br/>
-  <div class="container-bio-description blue lighten-5" itemprop="articleBody">
-      <p itemprop="text">
+  <div class="container-bio-description blue lighten-5" itemprop="articleSection">
+      <p>
 I am Juan José García, Information Systems Engineer, and I love to learn all the time new things, also teach some of them when I have the chance.
       </p>
-      <p itemprop="text">
+      <p>
 In this oportunity I am sharing my knowledge with any one who wants or needs some of this material.
       </p>
-      <p itemprop="text">
+      <p>
 I was born in Argentina the 25th of October 1985. And this is blog is a small index for those things I enjoy to do <i class="fa fa-smile-o"></i>, have a good stay.
       </p>
   </div>
