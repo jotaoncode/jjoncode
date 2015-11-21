@@ -21,8 +21,7 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
   </div>
 </h2>
 <section class="content-container" itemprop="articleBody">
-  <section class="row" itemprop="articleSection">
-    <div class="col l12 m12 s12">
+  <section itemprop="articleSection">
       <h4 itemprop="name">
         Objectives
       </h4>
@@ -35,33 +34,33 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
         The karma configuration we will be analyzing will be <a href="https://github.com/jotaoncode/web-istanbul/blob/master/karma.local.conf.js" target="_blank">this one</a>
       </p>
   </section>
-  <section class="row" itemprop="articleSection">
-      <h4 itemprop="name">
-        Pre requisites
-      </h4>
-      <p>
-        In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
-      </p>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Pre requisites
+    </h4>
+    <p>
+      In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
+    </p>
   </section>
-  <section class="row" itemprop="articleSection">
-      <h4 itemprop="name">
-        Defining Karma Reporters
-      </h4>
-      <p>
-        We will define what we want from Karma, and thats going to be with this line:
-      </p>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Defining Karma Reporters
+    </h4>
+    <p>
+      We will define what we want from Karma, and thats going to be with this line:
+    </p>
 {% highlight javascript %}
 reporters: ['spec', 'coverage']
 {% endhighlight %}
-      <p>
-      So we are going to give a report on coverage and run spec too. So in order to do so we need some dependencies in package json those are:
-      </p>
+    <p>
+    So we are going to give a report on coverage and run spec too. So in order to do so we need some dependencies in package json those are:
+    </p>
 {% highlight javascript %}
 karma-spec-reporter,
 karma-coverage
 {% endhighlight %}
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Defining Karma Frameworks
     </h4>
@@ -78,7 +77,7 @@ frameworks: [
     You can see that we are using mocha for runing those tests, and browserify to make a bundle on what we need to test.
     </p>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Files to test.
     </h4>
@@ -92,7 +91,7 @@ files: [
 ],
 {% endhighlight %}
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Preprocess some files
     </h4>
@@ -110,7 +109,7 @@ files: [
     Then we say execute browserify on test.
     </p>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Coverage Reporter
     </h4>
@@ -139,7 +138,7 @@ coverageReporter: {
     In this case we are saying that we want results in <strong>html, text, lcovonly</strong>. We are saying we will use Istanbul as an instrumenter to produce this coverage. lcov is the result the coverage, it is information formatted in a particular way so you can read from this lcov in order to produce a report in the way you need with different tools. So we can say that you can use other libraries that are not Istanbul and they may produce lcov information too.
     </p>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Browserify transformations
     </h4>
@@ -158,7 +157,7 @@ browserify: {
     So we are saying run brfs, this is a plugin that will inline the reading of files into bundles, and <strong>then</strong> istanbul will actually work with the coverage ignoring node modules and tests.
     </p>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Defining your browser
     </h4>
@@ -175,7 +174,7 @@ browserify: {
     You can see compatibility table for PhantomJS2 in <a href="http://kangax.github.io/compat-table/es5/#phantom">here</a>
     </p>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Running karma
     </h4>
@@ -196,7 +195,7 @@ browserify: {
       <img src="{{ "images/index-coverage.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
     </div>
   </section>
-  <section class="row" itemprop="articleSection">
+  <section itemprop="articleSection">
     <h4 itemprop="name">
       Conclusion
     </h4>
@@ -205,6 +204,4 @@ browserify: {
     <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
   </div>
   </section>
-
 </section>
-

@@ -21,51 +21,45 @@ description: How to measure and make a better performance web page with page spe
   </div>
 </h2>
 <div class="content-container" itemprop="articleBody">
-  <section class="row" itemprop="articleSection">
-    <div class="col l12 m12 s12">
-      <h3 class="primary-text-color title-content divider-color" itemprop="name">
-        Measure
-      </h3>
-      <div itemprop="description">
-        <p itemprop="text">
-          We will look at how to measure with Page Speed Insights and make better performance with a very simple example.
-          Also we will be using another nice tool thats works online and gives some reports for performance.
-        </p>
-        <p itemprop="text">
-          Using page speed insights is very handy and simple, it follows this pattern, "Measure" and then "Fix". We will see this two steps with this example.
-        </p>
-      </div>
+  <section itemprop="articleSection">
+    <h3 class="primary-text-color title-content divider-color" itemprop="name">
+      Measure
+    </h3>
+    <div itemprop="description">
+      <p itemprop="text">
+        We will look at how to measure with Page Speed Insights and make better performance with a very simple example.
+        Also we will be using another nice tool thats works online and gives some reports for performance.
+      </p>
+      <p itemprop="text">
+        Using page speed insights is very handy and simple, it follows this pattern, "Measure" and then "Fix". We will see this two steps with this example.
+      </p>
     </div>
   </section>
-  <section class="row" itemprop="articleSection">
-    <div class="col l12 m12 s12">
-      <h4 class="primary-text-color title-content divider-color" itemprop="name">
-        Pre Requisites
-      </h4>
-      <div itemprop="description">
-        <p itemprop="text">
-          In this case I assume you already have npm and nodejs installed.
-        </p>
-        <p itemprop="text">
-          In order to configure Page Speed Insights we will be using Grunt, may be there is another plugin to be used for other builders.
-        </p>
-      </div>
+  <section itemprop="articleSection">
+    <h4 class="primary-text-color title-content divider-color" itemprop="name">
+      Pre Requisites
+    </h4>
+    <div itemprop="description">
+      <p itemprop="text">
+        In this case I assume you already have npm and nodejs installed.
+      </p>
+      <p itemprop="text">
+        In order to configure Page Speed Insights we will be using Grunt, may be there is another plugin to be used for other builders.
+      </p>
     </div>
   </section>
-  <section class="row" itemscope itemtype="http://schema.org/Periodical" itemid="#steps">
-    <div class="col l12 m12 s12">
-      <h4 class="primary-text-color title-content divider-color" itemprop="about">
-        Steps
-      </h4>
-    </div>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installgrunt">
+  <section itemscope itemtype="http://schema.org/Periodical" itemid="#steps">
+    <h4 class="primary-text-color title-content divider-color" itemprop="about">
+      Steps
+    </h4>
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installgrunt">
       <meta itemprop="volumeNumber" content="installgrunt">
       <h5 itemprop="name">1- Install Grunt</h5>
       <p>
         You can see how to install <a href="http://gruntjs.com/getting-started" target="_blank">here</a>
       </p>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installpagespeed">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installpagespeed">
       <meta itemprop="volumeNumber" content="installpagespeed">
       <h5 itemprop="name">2- Install grunt-pagespeed</h5>
       <p>
@@ -105,7 +99,7 @@ description: How to measure and make a better performance web page with page spe
 }
 {% endhighlight %}
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#configuregrunt">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#configuregrunt">
       <meta itemprop="volumeNumber" content="configuregrunt">
       <h5 itemprop="name">3- Configure your Gruntfile</h5>
       <p>
@@ -139,7 +133,7 @@ require('load-grunt-tasks')(grunt);
         Complete the pagespeed configuration by setting up the page you need to test for performance, in this case I will use a sample page with low performance site (path before/index.html) and one after doing some improvements you will see it is after making some changes (after/index.html).
       </p>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#runpagespeed">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#runpagespeed">
       <meta itemprop="volumeNumber" content="runpagespeed">
       <h5 itemprop="name">4- Run Page Speed</h5>
       <p>
@@ -159,7 +153,7 @@ require('load-grunt-tasks')(grunt);
         <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="contentUrl">
       </div>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#analizereport">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#analizereport">
       <meta itemprop="volumeNumber" content="analizereport">
       <h5 itemprop="name">5- Analize your report</h5>
       <p>
@@ -190,7 +184,7 @@ require('load-grunt-tasks')(grunt);
       </p>
       <p>So we know the problem and we have several resources to analyze page speed insights and web pages test.</p>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#diagnoseandfix">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#diagnoseandfix">
       <meta itemprop="volumeNumber" content="diagnoseandfix">
       <h5 itemprop="name">6- Diagnose and Fix</h5>
       <p>
@@ -228,7 +222,7 @@ require('load-grunt-tasks')(grunt);
         4- Finally we can actually run everything with Gzip in server side. In my case I am running a node js application with express, so after 4.x express uses this module for compression. <a href="https://github.com/expressjs/compression">compression</a>
       </p>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#measureandreport">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#measureandreport">
       <meta itemprop="volumeNumber" content="diagnoseandfix">
       <h5 itemprop="name">7- Measure Again and Report</h5>
       <p>
@@ -299,7 +293,7 @@ require('load-grunt-tasks')(grunt);
       </table>
       <p>* The values of Javascript is not in report as it is inline for the final version, in order to not make another call to the server for this resource. So the HTML increment the size too.</p>
     </section>
-    <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#conclusion">
+    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#conclusion">
       <meta itemprop="volumeNumber" content="conclusion">
       <h3 itemprop="name">Conclusion:</h3>
       <p>
