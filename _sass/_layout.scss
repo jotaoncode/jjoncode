@@ -17,7 +17,6 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     text-decoration: none;
-    float: left;
 
     &,
     &:visited {
@@ -266,7 +265,8 @@
   text-decoration: none;
 }
 .logo-container {
-  text-align: right;
+  text-align: center;
+  margin-top: 1%;
 }
 a.brand-logo > svg {
   width: 100px;
@@ -417,6 +417,12 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   text-align: center;
 }
 @media only screen and (max-width : 728px) {
+  .site-title {
+    font-size: 1em;
+  }
+  a.brand-logo > svg{
+    width: 80px;
+  }
   .bio-image-container {
     width: 100%;
   }
