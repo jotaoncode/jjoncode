@@ -7,13 +7,21 @@ date: 2015-11-08 10:01:46-0700
 description: About Jota On Code
 ---
 <article itemscope itemtype="http://schema.org/Article">
-    <section class="content-container" itemprop="articleSection">
-      <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
-
-        <div class="title-container">
-          <h2 class="primary-text-color page-title" itemprop="headline">About Jota On Code</h2>
+    <h2 class="primary-text-color title-content divider-color">
+      <div class="row">
+        <div class="col l4 m4 s4">
+          <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
         </div>
-
+        <div class="col l4 m4 s4">
+          <span class="center">
+            About Jota On Code
+          </span>
+        </div>
+        <div class="col l4 m4 s4">
+        </div>
+      </div>
+    </h2>
+    <section class="content-container" itemprop="articleSection">
       <div class="card-container blue lighten-2 z-depth-3">
         <div class="bio-image-container">
           <img src="{{ "images/me.png" | prepend: site.baseurl }}" class="bio-image" alt="This is a foto a of me." itemprop="contentUrl">

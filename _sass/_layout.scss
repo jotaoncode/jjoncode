@@ -220,7 +220,7 @@
     margin-bottom: $spacing-unit;
 
     h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         text-align: center;
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -490,3 +490,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   padding: 1%;
 }
 
+.link-navigation {
+  font-size: 15px;
+}
