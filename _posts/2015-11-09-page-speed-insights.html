@@ -149,11 +149,15 @@ require('load-grunt-tasks')(grunt);
       <p>
         You should see a report like this one:
       </p>
-      <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="contentUrl">
+      <div class="centered-image">
+        <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="contentUrl">
+      </div>
       <p>
         We can measure a bit more with <a href="www.webpagetest.org">web page test</a>. Then we can see this results too:
       </p>
-      <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="contentUrl">
+      <div class="centered-image">
+        <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="contentUrl">
+      </div>
     </section>
     <section class="row" itemscope itemtype="http://schema.org/PublicationVolume" itemid="#analizereport">
       <meta itemprop="volumeNumber" content="analizereport">
@@ -164,7 +168,9 @@ require('load-grunt-tasks')(grunt);
       <p>
         If we see a bit more over the results of web page test. We can actually see that there is a waterfall chart in order to see how resources are processed and loaded on my page.
       </p>
-      <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="contentUrl">
+      <div class="centered-image">
+        <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="contentUrl">
+      </div>
       <p>
         Some resources you can see for web performance are:
       </p>
@@ -238,11 +244,15 @@ require('load-grunt-tasks')(grunt);
       <p>
         The results on my report are:
       </p>
-      <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="contentUrl">
+      <div class="centered-image">
+        <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="contentUrl">
+      </div>
       <p>
         The results on www.webpagetest.com are:
       </p>
-      <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="contentUrl">
+      <div class="centered-image">
+        <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="contentUrl">
+      </div>
       <p>
         So we can say the following:
       </p>
