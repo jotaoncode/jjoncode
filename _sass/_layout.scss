@@ -368,17 +368,19 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   text-align: center;
 }
 .ads-horizontal {
-  height: 100px;
+  height: 140px;
   width: 728px;
   margin: 0 auto;
+  vertical-align: middle;
   text-align: center;
   display: none;
 }
 .ads-horizontal-mobile {
-  height: 135px;
+  height: 165px;
   width: 320px;
   margin: 0 auto;
   text-align: center;
+  vertical-align: middle;
   display: none;
 }
 .page-content {
