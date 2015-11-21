@@ -412,6 +412,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .bio-image-container {
   float: left;
   width: 20%;
+  text-align: center;
 }
 .bio-basic-info-container {
   width: 80%;
@@ -421,6 +422,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 .bio-image {
   border-radius: 50%;
+  max-width: 100%;
 }
 .page-title {
   text-align: center;
@@ -441,7 +443,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
   .page-content {
     width: 100%;
-    padding: 5%;
   }
   .ads-horizontal-mobile {
     display: block;
