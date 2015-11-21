@@ -10,13 +10,12 @@ description: How to measure and make a better performance web page with page spe
   <div class="row">
     <div class="col l4 m12 s12">
       <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+      <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
     </div>
     <div class="col l4 m12 s12 center">
       <span  class="title-text">
         Page Speed Insights
       </span>
-    </div>
-    <div class="col l4 m4 s4">
     </div>
   </div>
 </h2>
@@ -295,7 +294,7 @@ require('load-grunt-tasks')(grunt);
     </section>
     <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#conclusion">
       <meta itemprop="volumeNumber" content="conclusion">
-      <h3 itemprop="name">Conclusion:</h3>
+      <h4 itemprop="name">Conclusion:</h4>
       <p>
       We can see that solving performance is about two phases and repeat, Measure First and then Diagnose/Fix, and it is important to have the correct tools for each case. 
       In this case we see two tools webpagetest and page speed insights. 
@@ -309,7 +308,7 @@ require('load-grunt-tasks')(grunt);
         The code used for this example is in this repo: <a href="https://github.com/jotaoncode/page-speed-test">here</a>
       </p>
     </section>
-    <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
   </section>
 </div>
-

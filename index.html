@@ -11,9 +11,9 @@ layout: default-no-ad
       {% for post in site.categories.news %}
       <li>
         <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
-          <span itemprop="headline">
+          <small itemprop="headline">
             {{ post.headline }}
-          </span>
+          </small>
           <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
             <i class="fa fa-book"></i>
           </a>
@@ -38,9 +38,9 @@ layout: default-no-ad
       {% for post in site.categories.projects %}
       <li>
         <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
-          <span itemprop="headline">
+          <small itemprop="headline">
             {{ post.headline }}
-          </span>
+          </small>
           <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
             <i class="fa fa-book"></i>
           </a>
