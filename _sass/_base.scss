@@ -1,8 +1,11 @@
 
 @import 'materialize';
 @import '../fonts/font-awesome-4.4.0/scss/font-awesome.scss';
-@import url(https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps);
 
+@font-face {
+  font-family: 'Bilbo Swash Caps';
+  src: url('../fonts/bilboswashcaps/BilboSwashCaps-Regular.ttf');
+}
 /**
  * Reset some basic elements
  */
