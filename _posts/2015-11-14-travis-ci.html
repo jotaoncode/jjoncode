@@ -1,0 +1,183 @@
+---
+layout: post
+category: news
+title: Jota On Code Travis CI
+headline: Continuous Integration and Github
+github: https://github.com/jotaoncode/trends
+description: Making Karma work with Saucelabs for testing in devices and browsers.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/09/page-speed-insights/" | prepend: site.baseurl }}" class="right link-navigation">Page Speed Insights <i class="fa fa-chevron-right"></i></a>
+  <div class="header-post-title">
+    <span  class="title-text">
+      Continuous Integration Github
+    </span>
+  </div>
+</h2>
+<section class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+      We worked on testing in headless browser, also we worked on saucelabs in order to make our tests on several browsers with a command line. All this thanks to karma, mocha, and many others. This time is the one say thanks to Travis and Github.
+      </p>
+      <p>
+      Github is a sharing and publishing service that works with descentralized repositories. You can actually fork, create repositories, and work with other people.
+      </p>
+      <p>
+      Travis is a service to make continuous integration to build and test projects hosted in Github.
+      </p>
+      <p>
+      So lets face what we want now and thats our objective. We want to give our thoughts through Github sharing with other people what we need probably some of this persons will be helping us. But dealing with so many contributions without any order can be a counter back to the happy ending of our project.
+      </p>
+      <p>
+      We need to share our thoughts with proves that it works, in a organized way so each contribution will actually give one more brick to the great house we are making.
+      </p>
+      <p>
+      So we need each contributor to work with tests, those tests will run every time the code goes to Github, thats the place we make our integration by giving a stable system. And also those tests will be running in different devices thanks to saucelabs.
+      </p>
+      <p>
+      Now who is the one to be running all this tests, well actually there are several options, Bamboo, Travis... Now we will look at Travis-ci.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Pre requisites
+    </h4>
+    <p>
+      I highly recommend looking to this posts before going to travis.
+      <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" target="_blank" > Browser testing</a>, 
+      <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" target="_blank">Saucelabs device testing</a>
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Setting up some tasks with npm
+    </h4>
+    <p>In this case we will setup some tasks with npm.</p>
+    <p>The npm scripts section will be this one: </p>
+{% highlight javascript %}
+"scripts": {
+  "test": "rm -rf coverage && karma start karma.local.conf.js",
+  "test-sl": "karma start karma.saucelabs.conf.js",
+  "ci": "npm run test && npm run test-sl",
+  "coveralls": "cat coverage/lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+}
+{% endhighlight %}
+    <p>So we have a test that runs our local like explained in <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" target="_blank"> Browser testing</a></p>
+    <p>We have test-sl <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" target="_blank"> for saucelabs</a></p>
+    <p>CI is for running both of them</p>
+    <p>And there is one more I added, <strong>coveralls</strong>. I recommend adding it too, you just need to login <a href="https://coveralls.io" target="_blank">coveralls</a>, and just add the repository you need to get a badge on the coverage you have for that project. We will go further on coverall soon.</p>
+    <p>This is just a flavour, I like to run those things I need with gulp for the day by day programming, and for building a version for each environment, production, testing, develop, with jshint / jscs, testing etc... But there are some things that needs to run in a post integration matter that are very expensive to be running all the time. So those things can actually be done by travis, saucelabs.</p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Defining some environment variables
+    </h4>
+    <p>
+      We need travis to run some of our things.
+    </p>
+    <p>
+      First we need to create an account on travis. Then we just select the Github project we want to make Continuous Integration.
+    </p>
+    <p>
+      Second create a file .travis.yml this will be the one say travis what to do.
+    </p>
+    <p>
+      Then we need to set some environment variables to Travis. This way some credentials will be available when travis runs our configuration.
+      But we don't want those credentials to be online for every body. So lets encrypt them, to do so I recommend going to <a href="http://docs.travis-ci.com/user/encryption-keys/" target="_blank"> travis encryption keys</a>.
+    </p>
+    <p>
+      At the moment of this writing I already have a .travis.yml, and just runned the following command.
+    </p>
+    <code>$ travis encrypt SAUCE_USERNAME=[YOUR USER NAME]</code>
+    <br/>
+    <code>$ travis encrypt SAUCE_ACCESS_KEY=[YOUR USER NAME]</code>
+    <p>So after doing this you will find the following code in your .travis.yml</p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Saying what to do to Travis
+    </h4>
+    <p>So I started defining some tasks that will actually run for my project. Each project has his own configuration, this is just one more option: </p>
+{% highlight python %}
+language: javascript
+addons:
+  sauce_connect: true
+env:
+  global:
+    - secure: uZtP4QnmeID2hC2r9y9Jg1C0YZi2vFTKeBC0T7MM1k/9UMh/c9TaUkRvYBE+fq51rJfcBtT3CgwOXmLBgTq/XAOCfePnAgPm7fshbfLCilQsM483LX1aQpLhQRaof9oAbvX7ZDMg8Ahwvnsep3SGCpFftiSXdgJz1Ym0V5ArCs8fEcH2Ds26Qb+uegL5zdwb+IWd6LuJtciTU8xp6/XYRtE44GDGQT04ASMBcASzk0WLLUqLaLdla/L78HptS1o+guzZ3zErzlNRG996RCTcnfImhTtLqOjIy2YNXrqbL1Y4hfIoputKsPqh5H0triQ00ArP4uKDZQgz2bnnVR2v9aLrbVicEMjuRHaBmqRsypAPnGl6My4ZrsA+tjfMHafJ0duNteWs/c7Z3cz1I7zO8x9FlFeSdrqegxJU/l+wJVBetLztObwkvGbkbqX+BW/lbBrUvSyv9i3fbj4DLotNYXsobuYTbQTPICiE+BoKRuSh+8y+tBVdWQ3tWaToX9KbRNR9mkPxt3myBZqAjTDRb1/pZwXares6iC7wpGspYpDVgAPYcYuTcMFnT6VotE83oK4WRJbuz62jiYdXbcOuDVP3WFKxkfZoj84pkwa524vDNggQQCY5bnlG9lNDDe5IrrBbh2bv0j+Ra/q1vPsjhVlLwKoz9wyjpc66vQd6Dlc=
+    - secure: rID3P+6xGBncwpCqHciyE+AgenBuS4IRQI5a7a84hm/BsJMxu/bJ3waNqSdFdtk0K2OqAg1iZo1FfbjV6PnxhqDzvaa/kcd/FBsE3zf41vXrU0rybpf6Mr3zUz9AXuj3fTS1AIq2A4Vq2G+dvCq2WIOlw3NbE34tsrH7v/ytfNvV3RYPhPyCvu+Li7zrDw5+z8QjZYTj33Nq118VxKxvWbwJPkFd73rolKkdxfPq7qC+Kuw5jmBoBsIdzQP4QgljsHwaqVY6K2PCQ1FphERsEXrUBeSsqCdbhQTI3pjKDq8Z6eOOaPEaiSx24oV432stMhJ3mTSkdGcX3LEnM4VgQa0fG6QkckDz4SHkA4L9t1KJ1/x8P4ZWTge3kQEALBzShVimwhTkNsS+Mm0HM8TnT0hkGt/5kMosZyAQ4yW/GzRNSc6IKiM7xwO+2krK0GDQV0nza+3xvYyRUx1cvUWCEzFy0OGJd8wg2wl7BeNWq50erobuMb0iJFJ9H11IJtoqyElAfCsuwal3BZt3GJAZmNUi8DaK3quF+qBhCs+OYbPxsD6/XrpB4QKcFEYvN8TUm+YYTq1zffvTmdkx2L8w3j/PKwnmJ+kt3a+wDpB/q/K+U/huWtTs4F4DjXn2gCdMbI09H3sirdKGq4I3FUsaNIeaUqgb4+h0MLxwVSgAyRg=
+before_script:
+  - npm install
+  - npm install -g gulp
+before_install:
+  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - sudo rm -rf /usr/local/phantomjs/bin/phantomjs
+  - sudo mv phantomjs /usr/local/phantomjs/bin/phantomjs
+script: gulp production
+install: travis_retry npm install
+after_success:
+  - npm run ci
+  - npm run coveralls
+{% endhighlight %}
+    <p>We can see that there are our secure encryption for saucelabs. That we are saying to travis we will connect to saucelabs.</p>
+    <p>That the present project is about javascript, and also there is <a href="http://docs.travis-ci.com/user/customizing-the-build/" target="_blank">a life cycle for travis</a>.</p>
+    <p>We are saying that we need to get phantomjs-2.0.0 from a wget and then we are extracting in order to implement this library, this is because of <a href="https://github.com/travis-ci/travis-ci/issues/3225" target="_blank" >this issue</a></p>
+    <p>In the script we are going to run gulp task for production. This is a task runner for this particular project, you can have whatever you need in order to create that version of the product you are going to have.</p>
+    <p>After the success on our running we will run our continuous integration, and coveralls</p>
+    <p>npm run ci command will run our tests for local and for saucelabs.</p>
+    <p>You can see this line <code>install: travis_retry npm install</code> is because some times when running npm install with travis failed because of .lock files for where present in the moment I runned with travis. This sometimes happens because of sharing some resources and folders, so travis can try again installing this dependencies that may be are shared with npm in a race condition problem. Remember all this is for free, so this is the workaround I found for this problem.</p>
+    <p>As we said before in browser testing, the coverage produces a lcov.info file that is the information we need to create reports of coverage.</p>
+    <p>Saying this, the lcov.info will go to the coveralls service and coveralls will create our badge for us for this repository.</p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Results
+    </h4>
+    <p>After so much work we can see the following results over travis:</p>
+    <div class="centered-image">
+      <img src="{{ "images/travis-result-running1.png" | prepend: site.baseurl }}" alt="Travis running report 1" itemprop="contentUrl">
+    </div>
+    <p>After running all the gulp tasks, the end of travis report is:</p>
+    <div class="centered-image">
+      <img src="{{ "images/travis-result-running2.png" | prepend: site.baseurl }}" alt="Travis running report 2" itemprop="contentUrl">
+    </div>
+    <p>We are happy to see that travis says everything goes alright</p>
+    <div class="centered-image">
+      <img src="{{ "images/travis-build-results.png" | prepend: site.baseurl }}" alt="Travis results success" itemprop="contentUrl">
+    </div>
+    <p>And in coveralls we can see the following:</p>
+    <div class="centered-image">
+      <img src="{{ "images/coveralls-results.png" | prepend: site.baseurl }}" alt="Coveralls results on success build of travis" itemprop="contentUrl">
+    </div>
+    <p>So now we know there is a lot to do! only 40% of my code is covered.</p>
+    <p>We can inform in Github to everyone how this project is going.</p>
+    <div class="centered-image">
+      <img src="{{ "images/github-badges.png" | prepend: site.baseurl }}" alt="Github badges representing the values of our build system." itemprop="contentUrl">
+    </div>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Conclusion
+    </h4>
+    <p>
+      We have created a complete environment for testing and working with Github with Continuous Integration and more. Actually we are not running just tests to say we are covered, we are running those tests to see how they work on different browsers with saucelabs. This is great.
+    </p>
+    <p>
+      We are informing with reports how much coverage we have in our code. And also we are saying that our build is successful.
+    </p>
+    <p>
+      This is awesome, but we need one more thing to make things going in a good contribution matter. We need to be organized in those contributions. I am actually working with git in a team following <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >this strategy of branches</a>, it is great.
+    </p>
+    <p>
+      Finally why not adding performance test to the end of this chain? Well actually I invite you to see the post about page speed insights. You could add some performance automation if you want too.
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/09/page-speed-insights/" | prepend: site.baseurl }}" class="right link-navigation">Page Speed Insights <i class="fa fa-chevron-right"></i></a>
+</section>
