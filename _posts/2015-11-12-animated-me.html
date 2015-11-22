@@ -1,0 +1,87 @@
+---
+layout: post
+category: projects
+title: Jota On Code Animated Me
+headline: Animated Me
+github: https://github.com/jotaoncode/animated-me
+external: http://jotaoncode.herokuapp.com/animated-me
+description: This is a web page with some animations in order to try a bit of velocity.js library and some css3
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+      Animated Me
+    </span>
+  </div>
+</h2>
+<section class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Objectives
+    </h4>
+    <p>
+      I was trying to create a portfolio web page with some animations, and found velocity.js. This is a great library, at that moment I begin to create things mixing CSS3 and velocity.js.
+    </p>
+    <p>
+      So objective is to create a portfoloio web page with some animations. This portfolio is not up to date, but for testing reasons.
+    </p>
+    <h4 itemprop="name">
+      Design
+    </h4>
+    <p>
+      This project actually is separeted like a movie, it has actors and scenes. You will find that those actors has an animation begin and end. And every scene has a start.
+    </p>
+    <p>
+      So when the scene start I am making a promes that sync all the actors in that scene. For example we can say that the scene Card will actually show a wand, and then will do something else in the following format.
+    </p>
+{% highlight javascript %}
+      Q.fcall(wizardHatActor.start.bind(wizardHatActor), self.endAnimation.bind(self))
+      .then(wizardHatActor.dropWand.bind(wizardHatActor), self.endAnimation.bind(self))
+      .then(wandActor.start.bind(wandActor), self.endAnimation.bind(self))
+      .then(wizardHatActor.hatStayAlive.bind(wizardHatActor), self.endAnimation.bind(self))
+      .then(wandActor.writeWelcome.bind(wandActor), self.endAnimation.bind(self))
+      .then(welcomeUserActor.start.bind(welcomeUserActor), self.endAnimation.bind(self))
+      .then(wandActor.wandStayAlive.bind(wandActor), self.endAnimation.bind(self))
+      .then(welcomeUserActor.hide.bind(welcomeUserActor), self.endAnimation.bind(self))
+      .then(wandActor.sendMagic.bind(wandActor), self.endAnimation.bind(self))
+      .then(magicBlastActor.start.bind(magicBlastActor), self.endAnimation.bind(self))
+      .then(magicBlastActor.createCard.bind(magicBlastActor), self.endAnimation.bind(self))
+      .
+      .
+      .
+{% endhighlight %}
+    <p>
+      You can read from this code the scene card will actually start with a Wizzard Hat that starts, and drops a wand, then the wand will start and the hat stays a live moving the wand will write welcome.
+    </p>
+    <p>
+      So the actor welcome will start and the wand stays a live, then the welcome actor hides, and the wand sends a magic. A magic blast actor (in lack of a better name) will actually go from the wand to create a card of presentation.
+    </p>
+    <p>
+      So you can read each scene like a book, code should be easy to read, and while the final results could be much better for this web page, I believe the main concept is to make a separete of concerns and responsabilities and do something different while learning a bit of velocity.js.
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/CardScene.png" | prepend: site.baseurl }}" alt="How card looks like when finished animation on card scene in Iphone 5">
+    </div>
+    <p>
+      The repo for animated-me is here is <a href="https://github.com/jotaoncode/animated-me">here</a>
+    </p>
+    <p>
+      A working sample is  <a href="http://jotaoncode.herokuapp.com/animated-me/index.html" target="_blank">here</a>
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Conclusion
+    </h4>
+    <p>
+      Separation of concerns, animation with a good frame rate, velocity.js, CSS3. Also I made the hat and the image of the card with Inkscape. Hope you enjoy this demo, it was very fun for me to do it.
+    </p>
+    <p>
+      This is a nice approach as you can actually play with actors and the times they perform each animation in the way you need. Each actor does not know of other actors, they have blocking and non blocking operations in order to perform in the way you want in your scene.
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
+</section>
+
