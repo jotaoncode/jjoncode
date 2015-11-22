@@ -1,0 +1,157 @@
+---
+layout: post
+category: news
+title: Jota On Code Device Testing
+headline: Cross browser testing
+github: https://github.com/jotaoncode/web-istanbul
+description: Making Karma work with Saucelabs for testing in devices and browsers.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser testing <i class="fa fa-chevron-right"></i></a>
+  <div class="header-post-title">
+    <span  class="title-text">
+      Configuration Saucelabs
+    </span>
+  </div>
+</h2>
+<section class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+        We will see a bit of configuration from karma and an example of a working enviroment for testing and coverage.
+        This project is the same I am using for <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}"> browser testing</a> , but with integration to saucelabs. So we can make our tests run in different devices and browsers.
+        For impatients  you can find the repo <a href="https://github.com/jotaoncode/web-istanbul">here</a>
+      </p>
+      <p>
+        The karma configuration we will be analyzing will be <a href="https://github.com/jotaoncode/web-istanbul/blob/master/karma.saucelabs.conf.js" target="_blank">this one</a>
+      </p>
+      <p>
+        Saucelabs will be working with our code in order to test in different devices and browsers. Please create an account on <a href="https://saucelabs.com" target="_blank">saucelabs</a>.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Pre requisites
+    </h4>
+    <p>
+      In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
+      It would be nice that you already saw <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}"></a>this post that explains about karma configuration of this project.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Defining browsers and platforms
+    </h4>
+    <p>
+      We need to define with karma which are going to be those devices and browsers that saucelabs will take care for.
+    </p>
+{% highlight javascript %}
+// https://saucelabs.com/platforms/
+var browsers = {
+  sl_chrome: {
+    base: 'SauceLabs',
+    browserName: 'chrome',
+    platform: 'Windows 7',
+    version: '35'
+  },
+  sl_firefox: {
+    base: 'SauceLabs',
+    browserName: 'firefox',
+    version: '30'
+  },
+  sl_ios_safari: {
+    base: 'SauceLabs',
+    browserName: 'iphone',
+    platform: 'OS X 10.9',
+    version: '7.1'
+  },
+  sl_ie_11: {
+    base: 'SauceLabs',
+    browserName: 'internet explorer',
+    platform: 'Windows 8.1',
+    version: '11'
+  }
+};
+{% endhighlight %}
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Karma saucelabs configurations
+    </h4>
+    <p>
+      We will take those <a href="https://github.com/jotaoncode/web-istanbul/blob/master/karma.local.conf.js" target="_blank">configurations from our local enviroment</a>,
+      and we will override those configurations with the ones we need for sauce labs.
+    </p>
+{% highlight javascript %}
+var cfg = {
+    reporters: ['saucelabs', 'spec'],
+    browsers: Object.keys(browsers),
+    customLaunchers: browsers,
+    captureTimeout: 120000,
+    browserNoActivityTimeout: 60000,
+    sauceLabs: {
+      testName: 'web-istanbul',
+      build: 'local ' + Date.now(),
+      recordLogs: true,
+      recordVideo: false,
+      startConnect: true,
+      recordScreenshots: true,
+      captureHtml: true,
+      passed: true,
+      public: 'public',
+      connectOptions: {
+        port: 5757,
+        logfile: 'sauce-connect.log'
+      }
+    },
+    singleRun: true,
+    autoWatch : false
+  }
+{% endhighlight %}
+    <p>
+      So we can see that reporters defined are saucelabs and spec, all this values will override the ones from karma.local.conf.js.
+    </p>
+    <p>
+      We are adding our browsers to the configuration. We will record logs in the file sauce-connect.log in order to see if there where any error during this execution.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Running Saucelabs
+    </h4>
+    <p>
+      So after defining our configurations for sauce labs on top of our locals. We can run saucelabs through our command line.
+    </p>
+    <p>
+      To do so we will define our credentials for saucelabs in enviroment variables. Those creadentials you will get after logging to saucelabs in your account settings.
+    </p>
+    <code>$ export SAUCE_USERNAME=[YOUR USER NAME]</code>
+    <br/>
+    <code>$ export SAUCE_ACCESS_KEY=[YOUR ACCESS KEY]</code>
+    <p>
+      Remember export running from terminal will actually work in that terminal, in order to get it working all the time from the command line you need to define it locally.
+    </p>
+    <p>
+      I will not go further on this two environment variables, the reasons is we will define them lately in another place, and actually some one else will run our configurations to saucelabs. (cough cough travis)
+    </p>
+    <p>
+      So running saucelabs from command line now will be. The same as running locally but with the configuration for saucelabs.
+    </p>
+    <code>$ karma start karma.saucelabs.conf.js</code>
+    <img src="{{ "images/testing.png" | prepend: site.baseurl }}" alt="Sauce labs reports for testing in some configurations" itemprop="contentUrl">
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Conclusion
+    </h4>
+    <p>
+      At this moment we just created a nice environment to test what we need with mocha, karma, phantomjs, and then we just added some cross browsing tests with saucelabs. Whats next? We can tell someone else to run all this for us hang tight to your chair and read the next post for Continuous Integration and Github.
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser testing <i class="fa fa-chevron-right"></i></a>
+</section>
