@@ -10,12 +10,12 @@ layout: default-no-ad
     <ul class="collapsible" data-collapsible="expandable">
       {% for post in site.categories.news %}
       <li>
-        <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
+        <div class="collapsible-header open-container" itemscope itemtype="http://schema.org/Article">
           <small itemprop="headline center">
             {{ post.headline }}
           </small>
-          <div class="primary-text-color btn-link-header right open-container">
-            <a class="fa fa-chevron-right"></a>
+          <div class="primary-text-color btn-link-header right">
+            <a class="fa fa-chevron-down"></a>
           </div>
         </div>
         <div class="collapsible-body blue-grey lighten-5">
@@ -42,12 +42,12 @@ layout: default-no-ad
     <ul class="collapsible" data-collapsible="expandable">
       {% for post in site.categories.projects %}
       <li>
-        <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
+        <div class="collapsible-header open-container" itemscope itemtype="http://schema.org/Article">
           <small itemprop="headline center">
             {{ post.headline }}
           </small>
-          <div class="primary-text-color btn-link-header right open-container">
-            <a class="fa fa-chevron-right"></a>
+          <div class="primary-text-color btn-link-header right">
+            <a class="fa fa-chevron-down"></a>
           </div>
         </div>
         <div class="collapsible-body blue-grey lighten-5">

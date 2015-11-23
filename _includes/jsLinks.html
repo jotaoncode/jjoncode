@@ -14,12 +14,23 @@
         ev.stopPropagation();
       });
     }
+    function changeChevronUpDown() {
+      $('.open-container').click(function (ev) {
+        var chevDown = $(ev.currentTarget).find('.fa-chevron-down'), chevUp;
+        if (chevDown && chevDown.length > 0) {
+          chevDown.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        } else {
+          chevUp = $(ev.currentTarget).find('.fa-chevron-up');
+          chevUp.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        }
+      });
+    }
     $(document).ready(function () {
       $('.collapsible').collapsible({
         accordion: false
       });
       removeAdListener();
-      stopPropagationOnLinks();
+      changeChevronUpDown();
     });
   </script>
   {% include google-analytics.html %}
