@@ -11,19 +11,24 @@ layout: default-no-ad
       {% for post in site.categories.news %}
       <li>
         <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
-          <small itemprop="headline">
+          <small itemprop="headline center">
             {{ post.headline }}
           </small>
-          <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
-            <i class="fa fa-book"></i>
-          </a>
+          <div class="primary-text-color btn-link-header right open-container">
+            <a class="fa fa-chevron-right"></a>
+          </div>
+        </div>
+        <div class="collapsible-body blue-grey lighten-5">
           <small class="date-new primary-text-color right" itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">
           {{ post.date | date: "%b %-d, %Y" }}
           </small>
-        </div>
-        <div class="collapsible-body blue-grey lighten-5">
-          <p class="primary-text-color" itemprop="description">
+          <p class="primary-text-color post-description" itemprop="description">
             {{ post.description }}
+          </p>
+          <p class="project-link-index">
+            <a href="{{ post.url }}" class="stop-propagation" itemprop="url">
+              <i class="fa fa-book"></i> Read
+            </a>
           </p>
         </div>
       </li>
@@ -38,23 +43,25 @@ layout: default-no-ad
       {% for post in site.categories.projects %}
       <li>
         <div class="collapsible-header" itemscope itemtype="http://schema.org/Article">
-          <small itemprop="headline">
+          <small itemprop="headline center">
             {{ post.headline }}
           </small>
-          <a href="{{ post.url }}" class="primary-text-color stop-propagation" itemprop="url">
-            <i class="fa fa-book"></i>
-          </a>
-          <a href="{{ post.external }}" class="primary-text-color stop-propagation" target="_blank">
-            <i class="fa fa-external-link"></i>
-          </a>
+          <div class="primary-text-color btn-link-header right open-container">
+            <a class="fa fa-chevron-right"></a>
+          </div>
         </div>
         <div class="collapsible-body blue-grey lighten-5">
           <p class="primary-text-color project-description" itemprop="description">
             {{ post.description }}
           </p>
           <p class="project-link-index">
-            <a href="{{ post.github }}" class="primary-text-color project-link stop-propagation" target="_blank">
-              <i class="fa fa-github"></i>
+            <a href="{{ post.url }}" class="stop-propagation" itemprop="url">
+              <i class="fa fa-book"></i> Read
+            </a>
+          </p>
+          <p class="project-link-index">
+            <a href="{{ post.external }}" class="stop-propagation" target="_blank">
+              <i class="fa fa-external-link"></i> Demo
             </a>
           </p>
         </div>
