@@ -16,9 +16,9 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
     </span>
   </div>
 </h2>
-<section class="content-container" itemprop="articleBody">
-  <section itemprop="articleSection">
-      <h4 itemprop="name">
+<div itemprop="articleBody">
+  <section itemprop="articleSection" class="content-container">
+      <h4 itemprop="headline">
         Objectives
       </h4>
       <p>
@@ -30,16 +30,16 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
         The karma configuration we will be analyzing will be <a href="https://github.com/jotaoncode/web-istanbul/blob/master/karma.local.conf.js" target="_blank">this one</a>
       </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Pre requisites
     </h4>
     <p>
       In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
     </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Defining Karma Reporters
     </h4>
     <p>
@@ -56,8 +56,8 @@ karma-spec-reporter,
 karma-coverage
 {% endhighlight %}
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Defining Karma Frameworks
     </h4>
     <p>
@@ -74,7 +74,7 @@ frameworks: [
     </p>
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Files to test.
     </h4>
     <p>
@@ -87,8 +87,8 @@ files: [
 ],
 {% endhighlight %}
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Preprocess some files
     </h4>
     <p>
@@ -105,8 +105,8 @@ files: [
     Then we say execute browserify on test.
     </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Coverage Reporter
     </h4>
     <p>
@@ -134,8 +134,8 @@ coverageReporter: {
     In this case we are saying that we want results in <strong>html, text, lcovonly</strong>. We are saying we will use Istanbul as an instrumenter to produce this coverage. lcov is the result the coverage, it is information formatted in a particular way so you can read from this lcov in order to produce a report in the way you need with different tools. So we can say that you can use other libraries that are not Istanbul and they may produce lcov information too.
     </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Browserify transformations
     </h4>
     <p>
@@ -153,8 +153,8 @@ browserify: {
     So we are saying run brfs, this is a plugin that will inline the reading of files into bundles, and <strong>then</strong> istanbul will actually work with the coverage ignoring node modules and tests.
     </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Defining your browser
     </h4>
     <p>
@@ -166,39 +166,39 @@ browserify: {
     ],
 {% endhighlight %}
     <p>
-    PhantomJS2 is a headless browser that avoids having so much heavy work when running tests in browser.
-    You can see compatibility table for PhantomJS2 in <a href="http://kangax.github.io/compat-table/es5/#phantom">here</a>
+    phantomjs2 is a headless browser that avoids having so much heavy work when running tests in browser.
+    you can see compatibility table for phantomjs2 in <a href="http://kangax.github.io/compat-table/es5/#phantom">here</a>
     </p>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
-      Running karma
+  <section itemprop="articlesection" class="content-container">
+    <h4 itemprop="headline">
+      running karma
     </h4>
     <p>
-    Finally we run karma with this line:
+    finally we run karma with this line:
     </p>
     <code>rm -r coverage && karma start karma.local.conf.js</code>
-    <p>The results on this coverage are in my terminal are this ones:</p>
+    <p>the results on this coverage are in my terminal are this ones:</p>
     <div class="centered-image">
-      <img src="{{ "images/npm-test-results.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+      <img src="{{ "images/npm-test-results.png" | prepend: site.baseurl }}" alt="report written in terminal for karma coverage" itemprop="contenturl">
     </div>
-    <p>The results on this coverage in my browser are:</p>
+    <p>the results on this coverage in my browser are:</p>
     <div class="centered-image">
-      <img src="{{ "images/coverage-report.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+      <img src="{{ "images/coverage-report.png" | prepend: site.baseurl }}" alt="report written in terminal for karma coverage" itemprop="contenturl">
     </div>
-    <p>We can explore those results a bit more and find the lines not covered</p>
+    <p>we can explore those results a bit more and find the lines not covered</p>
     <div class="centered-image">
-      <img src="{{ "images/index-coverage.png" | prepend: site.baseurl }}" alt="Report written in terminal for karma coverage" itemprop="contentUrl">
+      <img src="{{ "images/index-coverage.png" | prepend: site.baseurl }}" alt="report written in terminal for karma coverage" itemprop="contenturl">
     </div>
   </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
-      Conclusion
+  <section itemprop="articlesection" class="content-container">
+    <h4 itemprop="headline">
+      conclusion
     </h4>
-    <p>Now we know how to run our testing with coverage in a headless browser. There are several reasons why testing is important, soon we will see a nice approach in this same project with Continuous Integration, Github and for multiple platforms.</p>
-    <p>Hope you enjoy this little sample, the repo with the code is <a href="https://github.com/jotaoncode/web-istanbul">here</a></p>
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" class="right link-navigation">Saucelabs testing <i class="fa fa-chevron-right"></i></a>
+    <p>now we know how to run our testing with coverage in a headless browser. there are several reasons why testing is important, soon we will see a nice approach in this same project with continuous integration, github and for multiple platforms.</p>
+    <p>hope you enjoy this little sample, the repo with the code is <a href="https://github.com/jotaoncode/web-istanbul">here</a></p>
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> home</a>
+    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" class="right link-navigation">saucelabs testing <i class="fa fa-chevron-right"></i></a>
   </div>
   </section>
-</section>
+</div>
