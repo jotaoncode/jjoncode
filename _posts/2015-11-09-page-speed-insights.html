@@ -17,6 +17,7 @@ description: How to measure and make a better performance web page with page spe
   </div>
 </h2>
 <div class="content-container" itemprop="articleBody">
+  <meta itemprop="datePublished" content="2015-09-11">
   <section itemprop="articleSection">
     <h4 itemprop="name">
       Objectives
@@ -140,13 +141,13 @@ require('load-grunt-tasks')(grunt);
         You should see a report like this one:
       </p>
       <div class="centered-image">
-        <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="contentUrl">
+        <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="url">
       </div>
       <p>
         We can measure a bit more with <a href="www.webpagetest.org">web page test</a>. Then we can see this results too:
       </p>
       <div class="centered-image">
-        <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="contentUrl">
+        <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="url">
       </div>
     </section>
     <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#analizereport">
@@ -159,7 +160,7 @@ require('load-grunt-tasks')(grunt);
         If we see a bit more over the results of web page test. We can actually see that there is a waterfall chart in order to see how resources are processed and loaded on my page.
       </p>
       <div class="centered-image">
-        <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="contentUrl">
+        <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="url">
       </div>
       <p>
         Some resources you can see for web performance are:
@@ -235,13 +236,13 @@ require('load-grunt-tasks')(grunt);
         The results on my report are:
       </p>
       <div class="centered-image">
-        <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="contentUrl">
+        <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="image">
       </div>
       <p>
         The results on www.webpagetest.com are:
       </p>
       <div class="centered-image">
-        <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="contentUrl">
+        <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="image">
       </div>
       <p>
         So we can say the following:
