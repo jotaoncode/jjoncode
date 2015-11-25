@@ -20,7 +20,7 @@ description: How to measure and make a better performance web page with page spe
 </h2>
 <div itemprop="articleBody">
   <section itemprop="articleSection" class="content-container">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Objectives
     </h4>
     <div itemprop="description">
@@ -34,7 +34,7 @@ description: How to measure and make a better performance web page with page spe
     </div>
   </section>
   <section itemprop="articleSection" class="content-container">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Pre Requisites
     </h4>
     <div itemprop="description">
@@ -47,18 +47,18 @@ description: How to measure and make a better performance web page with page spe
     </div>
   </section>
   <section itemprop="articleSection" class="content-container">
-    <h4 class="primary-text-color title-content divider-color" itemprop="about">
+    <h4 class="primary-text-color title-content divider-color" itemprop="headline">
       Steps
     </h4>
   </section>
   <section class="content-container" itemprop="articleSection" >
-    <h5 itemprop="name">1- Install Grunt</h5>
+    <h5 itemprop="headline">1- Install Grunt</h5>
     <p>
       You can see how to install <a href="http://gruntjs.com/getting-started" target="_blank">here</a>
     </p>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5 itemprop="name">2- Install grunt-pagespeed</h5>
+    <h5 itemprop="headline">2- Install grunt-pagespeed</h5>
     <p>
       In order to install this package go <a href="https://github.com/jrcryer/grunt-pagespeed">here</a>
     </p>
@@ -97,7 +97,7 @@ description: How to measure and make a better performance web page with page spe
 {% endhighlight %}
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5 itemprop="name">3- Configure your Gruntfile</h5>
+    <h5 itemprop="headline">3- Configure your Gruntfile</h5>
     <p>
       This is a sample on how make a grunt file configuration for pagespeed.
     </p>
@@ -130,7 +130,7 @@ require('load-grunt-tasks')(grunt);
     </p>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5 itemprop="name">4- Run Page Speed</h5>
+    <h5 itemprop="headline">4- Run Page Speed</h5>
     <p>
       Now is the moment to actually test how are we going in performance with our tool, so we can "Measure" with page speed insights:
     </p>
@@ -149,7 +149,7 @@ require('load-grunt-tasks')(grunt);
     </div>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5 itemprop="name">5- Analize your report</h5>
+    <h5 itemprop="headline">5- Analize your report</h5>
     <p>
       So we can see that there are several problems and the biggest one is related to images. Actually we can see page speed insights actually says there is an impact of 236.47 over the rule Optimize Images. An then minimize render blocks, then minify Javascript and finally minify CSS, and we hit a 22 score for pagespeed.
     </p>
@@ -179,7 +179,7 @@ require('load-grunt-tasks')(grunt);
     <p>So we know the problem and we have several resources to analyze page speed insights and web pages test.</p>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5 >6- Diagnose and Fix</h5>
+    <h5 itemprop="headline">6- Diagnose and Fix</h5>
     <p>
       First we need to work on images. As we can see from the graphs there is a lot of impact over the rule of Optimize Images as well as we can see www.webpagetest.org there is a lot going on with the pizzeria image.
     </p>
@@ -216,7 +216,7 @@ require('load-grunt-tasks')(grunt);
     </p>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h5>7- Measure Again and Report</h5>
+    <h5 itemprop="headline">7- Measure Again and Report</h5>
     <p>
       In this case we can see that I listed several things in order to improve the little site we have. And again dealing with performance is about <strong>measure</strong> and then <strong>diagnose and fix</strong>.
     </p>
@@ -286,7 +286,7 @@ require('load-grunt-tasks')(grunt);
     <p>* The values of Javascript is not in report as it is inline for the final version, in order to not make another call to the server for this resource. So the HTML increment the size too.</p>
   </section>
   <section class="content-container" itemprop="articleSection">
-    <h4>Conclusion:</h4>
+    <h4 itemprop="headline">Conclusion:</h4>
     <p>
     We can see that solving performance is about two phases and repeat, Measure First and then Diagnose/Fix, and it is important to have the correct tools for each case. 
     In this case we see two tools webpagetest and page speed insights. 
