@@ -3,8 +3,10 @@ layout: default
 ---
 <div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ post.url }}">
   <div itemprop="about" itemscope itemtype="http://schema.org/Event">
-    <time itemprop="startDate" datetime="{{ coverageStartTime }}"></time>
-    <meta itemprop="name" datetime="{{ description }}"/>
+    <meta itemprop="startDate" datetime="25-11-2015"/>
+    <meta itemprop="datePublished" datetime="25-11-2015"/>
+    <meta itemprop="name" content="{{ description }}"/>
+    <meta itemprop="location" content="Argentina"/>
   </div>
   <time itemprop="coverageStartTime" datetime="{{ coverageStartTime }}"></time>
   <time itemprop="coverageEndTime" datetime="{{ coverageEndTime }}"></time>
