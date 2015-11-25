@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-<div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ post.url }}">
-  <meta itemprop="startDate" datetime="2015-11-09"/>
-  <meta itemprop="datePublished" datetime="2015-11-25"/>
+<div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ page.url | prepend: site.url}}">
+  <meta itemprop="datePublished" content="{{ page.date }}"/>
   <meta itemprop="description" content="{{ description }}"/>
   {{ content }}
   {% include twitter-contact.html %}
