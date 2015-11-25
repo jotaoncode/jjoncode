@@ -2,6 +2,8 @@
 layout: post
 title: Jota On Code Page speed insights
 headline: Page speed insights
+coverageStartTime: 2015-11-09T13:00:00-07:00
+coverageEndTime: 2015-11-09T13:00:00-07:00
 category: news
 github: https://github.com/jotaoncode/page-speed-test
 description: How to measure and make a better performance web page with page speed insights, web page test, and Heroku.
@@ -16,299 +18,287 @@ description: How to measure and make a better performance web page with page spe
     </span>
   </div>
 </h2>
-<div class="content-container" itemprop="articleBody">
-  <meta itemprop="datePublished" content="2015-09-11">
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
-      Objectives
-    </h4>
-    <div itemprop="description">
-      <p itemprop="text">
-        We will look at how to measure with Page Speed Insights and make better performance with a very simple example.
-        Also we will be using another nice tool thats works online and gives some reports for performance.
-      </p>
-      <p itemprop="text">
-        Using page speed insights is very handy and simple, it follows this pattern, "Measure" and then "Fix". We will see this two steps with this example.
-      </p>
-    </div>
-  </section>
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
-      Pre Requisites
-    </h4>
-    <div itemprop="description">
-      <p itemprop="text">
-        In this case I assume you already have npm and nodejs installed.
-      </p>
-      <p itemprop="text">
-        In order to configure Page Speed Insights we will be using Grunt, may be there is another plugin to be used for other builders.
-      </p>
-    </div>
-  </section>
-  <section itemscope itemtype="http://schema.org/Periodical" itemid="#steps">
-    <h4 class="primary-text-color title-content divider-color" itemprop="about">
-      Steps
-    </h4>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installgrunt">
-      <meta itemprop="volumeNumber" content="installgrunt">
-      <h5 itemprop="name">1- Install Grunt</h5>
-      <p>
-        You can see how to install <a href="http://gruntjs.com/getting-started" target="_blank">here</a>
-      </p>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#installpagespeed">
-      <meta itemprop="volumeNumber" content="installpagespeed">
-      <h5 itemprop="name">2- Install grunt-pagespeed</h5>
-      <p>
-        In order to install this package go <a href="https://github.com/jrcryer/grunt-pagespeed">here</a>
-      </p>
-      <p>
-        Then just run the following command to install this package:
-      <code>
-        $ npm install --save-dev grunt-pagespeed
-      </code>
-      </p>
-      <p>
-       Install load-grunt-tasks too. My package.json looks like this one:
-      </p>
+<section itemprop="articleSection" class="content-container">
+  <h4 itemprop="name">
+    Objectives
+  </h4>
+  <div itemprop="description">
+    <p itemprop="text">
+      We will look at how to measure with Page Speed Insights and make better performance with a very simple example.
+      Also we will be using another nice tool thats works online and gives some reports for performance.
+    </p>
+    <p itemprop="text">
+      Using page speed insights is very handy and simple, it follows this pattern, "Measure" and then "Fix". We will see this two steps with this example.
+    </p>
+  </div>
+</section>
+<section itemprop="articleSection" class="content-container">
+  <h4 itemprop="name">
+    Pre Requisites
+  </h4>
+  <div itemprop="description">
+    <p itemprop="text">
+      In this case I assume you already have npm and nodejs installed.
+    </p>
+    <p itemprop="text">
+      In order to configure Page Speed Insights we will be using Grunt, may be there is another plugin to be used for other builders.
+    </p>
+  </div>
+</section>
+<section class="content-container">
+  <h4 class="primary-text-color title-content divider-color" itemprop="about">
+    Steps
+  </h4>
+</section>
+<section class="content-container">
+  <h5 itemprop="name">1- Install Grunt</h5>
+  <p>
+    You can see how to install <a href="http://gruntjs.com/getting-started" target="_blank">here</a>
+  </p>
+</section>
+<section class="content-container">
+  <h5 itemprop="name">2- Install grunt-pagespeed</h5>
+  <p>
+    In order to install this package go <a href="https://github.com/jrcryer/grunt-pagespeed">here</a>
+  </p>
+  <p>
+    Then just run the following command to install this package:
+  <code>
+    $ npm install --save-dev grunt-pagespeed
+  </code>
+  </p>
+  <p>
+   Install load-grunt-tasks too. My package.json looks like this one:
+  </p>
 {% highlight json %}
 {
-  "name": "PageSpeedInsights",
-  "version": "0.0.1",
-  "description": "Will test before and after performance measure",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "dependencies": {
-    "grunt-pagespeed": "^2.0.0",
-    "jquery": "^2.1.4",
-    "material-design-icons": "^2.0.0",
-    "materialize-css": "^0.97.1",
-    "q": "^1.4.1",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
-    "grunt-responsive-images": "^0.1.6",
-    "load-grunt-tasks": "^3.3.0",
-    "node-minify": "^1.3.6"
-  }
+"name": "PageSpeedInsights",
+"version": "0.0.1",
+"description": "Will test before and after performance measure",
+"repository": {
+  "type": "git",
+  "url": ""
+},
+"dependencies": {
+  "grunt-pagespeed": "^2.0.0",
+  "jquery": "^2.1.4",
+  "material-design-icons": "^2.0.0",
+  "materialize-css": "^0.97.1",
+  "q": "^1.4.1",
+  "underscore": "^1.8.3"
+},
+"devDependencies": {
+  "grunt-responsive-images": "^0.1.6",
+  "load-grunt-tasks": "^3.3.0",
+  "node-minify": "^1.3.6"
+}
 }
 {% endhighlight %}
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#configuregrunt">
-      <meta itemprop="volumeNumber" content="configuregrunt">
-      <h5 itemprop="name">3- Configure your Gruntfile</h5>
-      <p>
-        This is a sample on how make a grunt file configuration for pagespeed.
-      </p>
+</section>
+<section class="content-container">
+  <h5 itemprop="name">3- Configure your Gruntfile</h5>
+  <p>
+    This is a sample on how make a grunt file configuration for pagespeed.
+  </p>
 {% highlight javascript %}
 //Grunt File configuration
 module.exports = function(grunt) {
 //Initialize configuration with page speed
 grunt.initConfig({
 pagespeed: {
+options: {
+  nokey: true,
+  url: "https://jotaoncode.herokuapp.com/pagespeedtest",
+  threshold: 90
+},
+paths: {
   options: {
-    nokey: true,
-    url: "https://jotaoncode.herokuapp.com/pagespeedtest",
+    paths: ["/before/index.html", "/after/index.html"],
+    locale: "en_GB",
+    strategy: "desktop",
     threshold: 90
-  },
-  paths: {
-    options: {
-      paths: ["/before/index.html", "/after/index.html"],
-      locale: "en_GB",
-      strategy: "desktop",
-      threshold: 90
-    }
   }
+}
 }
 });
 require('load-grunt-tasks')(grunt);
 };
 {% endhighlight %}
-      <p>
-        Complete the pagespeed configuration by setting up the page you need to test for performance, in this case I will use a sample page with low performance site (path before/index.html) and one after doing some improvements you will see it is after making some changes (after/index.html).
-      </p>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#runpagespeed">
-      <meta itemprop="volumeNumber" content="runpagespeed">
-      <h5 itemprop="name">4- Run Page Speed</h5>
-      <p>
-        Now is the moment to actually test how are we going in performance with our tool, so we can "Measure" with page speed insights:
-      </p>
-      <code>$ grunt pagespeed</code>
-      <p>
-        You should see a report like this one:
-      </p>
-      <div class="centered-image">
-        <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="url">
-      </div>
-      <p>
-        We can measure a bit more with <a href="www.webpagetest.org">web page test</a>. Then we can see this results too:
-      </p>
-      <div class="centered-image">
-        <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="url">
-      </div>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#analizereport">
-      <meta itemprop="volumeNumber" content="analizereport">
-      <h5 itemprop="name">5- Analize your report</h5>
-      <p>
-        So we can see that there are several problems and the biggest one is related to images. Actually we can see page speed insights actually says there is an impact of 236.47 over the rule Optimize Images. An then minimize render blocks, then minify Javascript and finally minify CSS, and we hit a 22 score for pagespeed.
-      </p>
-      <p>
-        If we see a bit more over the results of web page test. We can actually see that there is a waterfall chart in order to see how resources are processed and loaded on my page.
-      </p>
-      <div class="centered-image">
-        <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="url">
-      </div>
-      <p>
-        Some resources you can see for web performance are:
-      </p>
-      <p>
-        <a href="http://www.amazon.com/Steve-Souders/e/B001I9TVJS">Steve Souders High Performance Web Sites</a>
-      </p>
-      <p>
-        <a href="https://www.udacity.com/">Front End Nanodegree: Course Website Performance Optimization</a>
-      </p>
-      <p>
-        Here is another implementation on psi, grunt page speed is actually working with this behind the scenes.
-        <a href="http://addyosmani.com/blog/automating-web-performance-measurement-with-psi-for-node/">Automating web performance measure with psi for node</a>
-      </p>
-      <p>
-        Here are the rules that page speed insight is actually working with in order to get those results in the report.
-        <a href="https://developers.google.com/speed/docs/insights/rules">Page speed insights Rules</a>
-      </p>
-      <p>So we know the problem and we have several resources to analyze page speed insights and web pages test.</p>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#diagnoseandfix">
-      <meta itemprop="volumeNumber" content="diagnoseandfix">
-      <h5 itemprop="name">6- Diagnose and Fix</h5>
-      <p>
-        First we need to work on images. As we can see from the graphs there is a lot of impact over the rule of Optimize Images as well as we can see www.webpagetest.org there is a lot going on with the pizzeria image.
-      </p>
-      <p>
-        So we can see there are 3 images, let see how can we work in each case:
-      </p>
-      <p>
-        A- There is a logo file of jotaoncode, we can actually remove the image, add the SVG to the html, and we will be saving a call to server for this resource for a very low cost. Also there is no loose on quality for svg values when transforming the image changing the width or height or anything we want with it, so it is a good trade.
-      </p>
-      <p>
-        B- There is a Pizzeria jpg thats huge with 2.3 MB. So we can actually change this with by changing quality and size of this natural image.
-      </p>
-      <p>
-        C- There is a picture of me that can be resized and we can change quality a bit too.
-      </p>
-      <p>
-        We can work with images using this plugin for grunt too. It actually resizes and optimizes images in the way we need for this case.
-        <a href="https://github.com/andismith/grunt-responsive-images">grunt-responsive-images</a>
-      </p>
-      <p>
-        This is just one part of improving our site. In this case we will actually do some other things after "measuring" and "diagnose and fix" several times.
-      </p>
-      <p>
-        1- We added javascript to the bottom of the html, so it does not stop with rendering of the page.
-      </p>
-      <p>
-        2- We minified css and javascript.
-      </p>
-      <p>
-        3- We added javascript as inline instead of adding it as a source.
-      </p>
-      <p>
-        4- Finally we can actually run everything with Gzip in server side. In my case I am running a node js application with express, so after 4.x express uses this module for compression. <a href="https://github.com/expressjs/compression">compression</a>
-      </p>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#measureandreport">
-      <meta itemprop="volumeNumber" content="diagnoseandfix">
-      <h5 itemprop="name">7- Measure Again and Report</h5>
-      <p>
-        In this case we can see that I listed several things in order to improve the little site we have. And again dealing with performance is about <strong>measure</strong> and then <strong>diagnose and fix</strong>.
-      </p>
-      <p>
-        So you can be sure that I repeated that process of measuring diagnosing and fixing several times before showing this final report. Anyway it is not the purpose to see the best performance on this site it is just in order to see how this tools works.
-      </p>
-      <p>
-        So finally we run page speed again and see:
-      </p>
-      <code>$ grunt pagespeed</code>
-      <p>
-        The results on my report are:
-      </p>
-      <div class="centered-image">
-        <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="image">
-      </div>
-      <p>
-        The results on www.webpagetest.com are:
-      </p>
-      <div class="centered-image">
-        <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="image">
-      </div>
-      <p>
-        So we can say the following:
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Concept</th>
-            <th>Before</th>
-            <th>After</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Images</td>
-          <td>2.38 MB</td>
-          <td>62.62 KB</td>
-        </tr>
-        <tr>
-          <td>Javascript *</td>
-          <td>491.36 KB</td>
-          <td>248.38 KB</td>
-        </tr>
-        <tr>
-          <td>CSS</td>
-          <td>197.68 KB</td>
-          <td>145.55 KB</td>
-        </tr>
-        <tr>
-          <td>HTML *</td>
-          <td>1.82 KB</td>
-          <td>254.22 KB</td>
-        </tr>
-        <tr>
-          <td>Resources</td>
-          <td>17</td>
-          <td>9</td>
-        </tr>
-        <tr>
-          <td>Time</td>
-          <td>4.699 s</td>
-          <td>0.759 s</td>
-        </tr>
-        </tbody>
-      </table>
-      <p>* The values of Javascript is not in report as it is inline for the final version, in order to not make another call to the server for this resource. So the HTML increment the size too.</p>
-    </section>
-    <section itemscope itemtype="http://schema.org/PublicationVolume" itemid="#conclusion">
-      <meta itemprop="volumeNumber" content="conclusion">
-      <h4 itemprop="name">Conclusion:</h4>
-      <p>
-      We can see that solving performance is about two phases and repeat, Measure First and then Diagnose/Fix, and it is important to have the correct tools for each case. 
-      In this case we see two tools webpagetest and page speed insights. 
-      Also this is a particular problem and you can see that for each page or web application you will actually face another one, you may have you own strategy to solve those cases. 
-      </p>
-      <p>
-      There is a nice place where you can find out how much it costs for someone to use your site on mobile networks around the world. Before improvements the higher costs was around: 0.82$ USD and after improvements is: 0.07$ USD for the country Vanuatu in both cases, so my site is cheaper for people too <i class="fa fa-smile-o"></i>.
-      Here you can test your application to see how much it costs: <a href="http://whatdoesmysitecost.com">whatdoesmysitecost.com</a>
-      </p>
-      <p>
-        The code used for this example is in this repo: <a href="https://github.com/jotaoncode/page-speed-test">here</a>
-      </p>
-    </section>
-    <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
+  <p>
+    Complete the pagespeed configuration by setting up the page you need to test for performance, in this case I will use a sample page with low performance site (path before/index.html) and one after doing some improvements you will see it is after making some changes (after/index.html).
+  </p>
+</section>
+<section class="content-container">
+  <h5 itemprop="name">4- Run Page Speed</h5>
+  <p>
+    Now is the moment to actually test how are we going in performance with our tool, so we can "Measure" with page speed insights:
+  </p>
+  <code>$ grunt pagespeed</code>
+  <p>
+    You should see a report like this one:
+  </p>
+  <div class="centered-image">
+    <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="url">
   </div>
-  </section>
-</div>
-
+  <p>
+    We can measure a bit more with <a href="www.webpagetest.org">web page test</a>. Then we can see this results too:
+  </p>
+  <div class="centered-image">
+    <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="url">
+  </div>
+</section>
+<section class="content-container">
+  <h5 itemprop="name">5- Analize your report</h5>
+  <p>
+    So we can see that there are several problems and the biggest one is related to images. Actually we can see page speed insights actually says there is an impact of 236.47 over the rule Optimize Images. An then minimize render blocks, then minify Javascript and finally minify CSS, and we hit a 22 score for pagespeed.
+  </p>
+  <p>
+    If we see a bit more over the results of web page test. We can actually see that there is a waterfall chart in order to see how resources are processed and loaded on my page.
+  </p>
+  <div class="centered-image">
+    <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="url">
+  </div>
+  <p>
+    Some resources you can see for web performance are:
+  </p>
+  <p>
+    <a href="http://www.amazon.com/Steve-Souders/e/B001I9TVJS">Steve Souders High Performance Web Sites</a>
+  </p>
+  <p>
+    <a href="https://www.udacity.com/">Front End Nanodegree: Course Website Performance Optimization</a>
+  </p>
+  <p>
+    Here is another implementation on psi, grunt page speed is actually working with this behind the scenes.
+    <a href="http://addyosmani.com/blog/automating-web-performance-measurement-with-psi-for-node/">Automating web performance measure with psi for node</a>
+  </p>
+  <p>
+    Here are the rules that page speed insight is actually working with in order to get those results in the report.
+    <a href="https://developers.google.com/speed/docs/insights/rules">Page speed insights Rules</a>
+  </p>
+  <p>So we know the problem and we have several resources to analyze page speed insights and web pages test.</p>
+</section>
+<section class="content-container">
+  <meta content="diagnoseandfix">
+  <h5 >6- Diagnose and Fix</h5>
+  <p>
+    First we need to work on images. As we can see from the graphs there is a lot of impact over the rule of Optimize Images as well as we can see www.webpagetest.org there is a lot going on with the pizzeria image.
+  </p>
+  <p>
+    So we can see there are 3 images, let see how can we work in each case:
+  </p>
+  <p>
+    A- There is a logo file of jotaoncode, we can actually remove the image, add the SVG to the html, and we will be saving a call to server for this resource for a very low cost. Also there is no loose on quality for svg values when transforming the image changing the width or height or anything we want with it, so it is a good trade.
+  </p>
+  <p>
+    B- There is a Pizzeria jpg thats huge with 2.3 MB. So we can actually change this with by changing quality and size of this natural image.
+  </p>
+  <p>
+    C- There is a picture of me that can be resized and we can change quality a bit too.
+  </p>
+  <p>
+    We can work with images using this plugin for grunt too. It actually resizes and optimizes images in the way we need for this case.
+    <a href="https://github.com/andismith/grunt-responsive-images">grunt-responsive-images</a>
+  </p>
+  <p>
+    This is just one part of improving our site. In this case we will actually do some other things after "measuring" and "diagnose and fix" several times.
+  </p>
+  <p>
+    1- We added javascript to the bottom of the html, so it does not stop with rendering of the page.
+  </p>
+  <p>
+    2- We minified css and javascript.
+  </p>
+  <p>
+    3- We added javascript as inline instead of adding it as a source.
+  </p>
+  <p>
+    4- Finally we can actually run everything with Gzip in server side. In my case I am running a node js application with express, so after 4.x express uses this module for compression. <a href="https://github.com/expressjs/compression">compression</a>
+  </p>
+</section>
+<section class="content-container">
+  <h5>7- Measure Again and Report</h5>
+  <p>
+    In this case we can see that I listed several things in order to improve the little site we have. And again dealing with performance is about <strong>measure</strong> and then <strong>diagnose and fix</strong>.
+  </p>
+  <p>
+    So you can be sure that I repeated that process of measuring diagnosing and fixing several times before showing this final report. Anyway it is not the purpose to see the best performance on this site it is just in order to see how this tools works.
+  </p>
+  <p>
+    So finally we run page speed again and see:
+  </p>
+  <code>$ grunt pagespeed</code>
+  <p>
+    The results on my report are:
+  </p>
+  <div class="centered-image">
+    <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="image">
+  </div>
+  <p>
+    The results on www.webpagetest.com are:
+  </p>
+  <div class="centered-image">
+    <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="image">
+  </div>
+  <p>
+    So we can say the following:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>Before</th>
+        <th>After</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Images</td>
+      <td>2.38 MB</td>
+      <td>62.62 KB</td>
+    </tr>
+    <tr>
+      <td>Javascript *</td>
+      <td>491.36 KB</td>
+      <td>248.38 KB</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>197.68 KB</td>
+      <td>145.55 KB</td>
+    </tr>
+    <tr>
+      <td>HTML *</td>
+      <td>1.82 KB</td>
+      <td>254.22 KB</td>
+    </tr>
+    <tr>
+      <td>Resources</td>
+      <td>17</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>4.699 s</td>
+      <td>0.759 s</td>
+    </tr>
+    </tbody>
+  </table>
+  <p>* The values of Javascript is not in report as it is inline for the final version, in order to not make another call to the server for this resource. So the HTML increment the size too.</p>
+</section>
+<section class="content-container">
+  <h4>Conclusion:</h4>
+  <p>
+  We can see that solving performance is about two phases and repeat, Measure First and then Diagnose/Fix, and it is important to have the correct tools for each case. 
+  In this case we see two tools webpagetest and page speed insights. 
+  Also this is a particular problem and you can see that for each page or web application you will actually face another one, you may have you own strategy to solve those cases. 
+  </p>
+  <p>
+  There is a nice place where you can find out how much it costs for someone to use your site on mobile networks around the world. Before improvements the higher costs was around: 0.82$ USD and after improvements is: 0.07$ USD for the country Vanuatu in both cases, so my site is cheaper for people too <i class="fa fa-smile-o"></i>.
+  Here you can test your application to see how much it costs: <a href="http://whatdoesmysitecost.com">whatdoesmysitecost.com</a>
+  </p>
+  <p>
+    The code used for this example is in this repo: <a href="https://github.com/jotaoncode/page-speed-test">here</a>
+  </p>
+</section>
+<a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a>
+<a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>

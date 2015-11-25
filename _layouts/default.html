@@ -7,26 +7,19 @@ sitemap:
 ---
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-    {% include header.html %}
-
-    <div class="ads-left" id="ad-left">
-      {% include adsense-left.html %}
-    </div>
-
-    <div class="container page-content">
-        {{ content }}
-    </div>
-
-    <div class="ads-right" id="ad-right">
-      {% include adsense-right.html %}
-    </div>
-    {% include footer.html %}
-
+    <article itemscope itemtype="http://schema.org/Blog">
+      {% include header.html %}
+      <aside class="ads-left" id="ad-left">
+        {% include adsense-left.html %}
+      </aside>
+      {{ content }}
+      <aside class="ads-right" id="ad-right">
+        {% include adsense-right.html %}
+      </aside>
+      {% include footer.html %}
+    </article>
     {% include jsLinks.html %}
   </body>
-
 </html>

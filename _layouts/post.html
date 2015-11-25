@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/Article">
+<div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ post.url }}">
+  <div itemprop="about" itemscope itemtype="http://schema.org/Event">
+    <time itemprop="startDate" datetime="{{ coverageStartTime }}"></time>
+    <meta itemprop="name" datetime="{{ description }}"/>
+  </div>
+  <time itemprop="coverageStartTime" datetime="{{ coverageStartTime }}"></time>
+  <time itemprop="coverageEndTime" datetime="{{ coverageEndTime }}"></time>
   {{ content }}
   {% include twitter-contact.html %}
   <div class="ads-horizontal" id="ad-horizontal">
@@ -11,4 +17,4 @@ layout: default
     {% include adsense-mobile.html %}
   </div>
   {% include posts.html %}
-</article>
+</div>
