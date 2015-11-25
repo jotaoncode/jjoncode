@@ -2,15 +2,9 @@
 layout: default
 ---
 <div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ post.url }}">
-  <div itemprop="about" itemscope itemtype="http://schema.org/Event">
-    <meta itemprop="startDate" datetime="25-11-2015"/>
-    <meta itemprop="datePublished" datetime="25-11-2015"/>
-    <meta itemprop="name" content="{{ description }}"/>
-    <div itemprop="location">
-      <meta itemprop="name" content="Argentina"/>
-      <meta itemprop="address" content="Buenos Aires, Guemes 3772"/>
-    </div>
-  </div>
+  <meta itemprop="startDate" datetime="25-11-2015"/>
+  <meta itemprop="datePublished" datetime="25-11-2015"/>
+  <meta itemprop="name" content="{{ description }}"/>
   <time itemprop="coverageStartTime" datetime="{{ coverageStartTime }}"></time>
   <time itemprop="coverageEndTime" datetime="{{ coverageEndTime }}"></time>
   {{ content }}
