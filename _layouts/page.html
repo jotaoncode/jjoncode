@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/Article">
+<div class="container page-content" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ page.url | prepend: site.url}}">
+  <meta itemprop="datePublished" content="{{ page.date }}"/>
+  <meta itemprop="description" content="{{ page.description }}"/>
   {{ content }}
   {% include twitter-contact.html %}
   <div class="ads-horizontal" id="ad-horizontal">
@@ -10,4 +12,4 @@ layout: default
   <div class="ads-horizontal-mobile" id="ad-mobile">
     {% include adsense-mobile.html %}
   </div>
-</article>
+</div>
