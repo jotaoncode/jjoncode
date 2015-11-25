@@ -16,9 +16,9 @@ description: Making Karma work with Saucelabs for testing in devices and browser
     </span>
   </div>
 </h2>
-<section class="content-container" itemprop="articleBody">
+<div class="content-container" itemprop="articleBody">
   <section itemprop="articleSection">
-      <h4 itemprop="name">
+      <h4 itemprop="headline">
         Objectives
       </h4>
       <p>
@@ -34,7 +34,7 @@ description: Making Karma work with Saucelabs for testing in devices and browser
       </p>
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Pre requisites
     </h4>
     <p>
@@ -43,7 +43,7 @@ description: Making Karma work with Saucelabs for testing in devices and browser
     </p>
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Defining browsers and platforms
     </h4>
     <p>
@@ -79,7 +79,7 @@ var browsers = {
 {% endhighlight %}
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Karma saucelabs configurations
     </h4>
     <p>
@@ -120,7 +120,7 @@ var cfg = {
     </p>
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Running Saucelabs
     </h4>
     <p>
@@ -142,10 +142,10 @@ var cfg = {
       So running saucelabs from command line now will be. The same as running locally but with the configuration for saucelabs.
     </p>
     <code>$ karma start karma.saucelabs.conf.js</code>
-    <img src="{{ "images/testing.png" | prepend: site.baseurl }}" alt="Sauce labs reports for testing in some configurations" itemprop="contentUrl">
+    <img src="{{ "images/testing.png" | prepend: site.baseurl }}" alt="Sauce labs reports for testing in some configurations" itemprop="image">
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Conclusion
     </h4>
     <p>
@@ -154,4 +154,4 @@ var cfg = {
   </section>
   <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
   <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
-</section>
+</div>

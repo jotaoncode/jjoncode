@@ -16,9 +16,9 @@ description: This is a game created for Udacity Front End Nanodegree. Assets and
     </span>
   </div>
 </h2>
-<section class="content-container" itemprop="articleBody">
-  <section itemprop="articleSection">
-    <h4 itemprop="name">
+<div itemprop="articleBody">
+  <section itemprop="articleSection" class="content-container">
+    <h4 itemprop="headline">
       Objectives
     </h4>
     <p>
@@ -34,20 +34,20 @@ description: This is a game created for Udacity Front End Nanodegree. Assets and
       The final results are very nice. This is the picture of it, and you can play with it in <a href="http://jotaoncode.herokuapp.com/frogger-clone/">here</a>. In the future I will improve this game a bit more.
     </p>
     <div class="centered-image">
-      <img src="{{ "images/FroggerClone.png" | prepend: site.baseurl }}" alt="How arcade frogger clone game looks like">
+      <img src="{{ "images/FroggerClone.png" | prepend: site.baseurl }}" alt="How arcade frogger clone game looks like" itemprop="image">
     </div>
     <p>
       The repo for this game is here is <a target="_blank" href="https://github.com/jotaoncode/frontend-nanodegree-arcade-game">here</a>
     </p>
   </section>
   <section itemprop="articleSection">
-    <h4 itemprop="name">
+    <h4 itemprop="headline">
       Conclusion
     </h4>
     <p>
       We can create a little game without any framework only using canvas, but it is important to be carefull with expensive operations during the animation. Also it is nice to see the correct use of prototype and to check how to inherit what I need to not produce that expensive operation during the creation of the elements that involves the game.
     </p>
+    <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
   </section>
-  <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
-</section>
+</div>
 
