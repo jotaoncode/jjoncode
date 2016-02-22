@@ -1,0 +1,190 @@
+---
+layout: post
+category: news
+title: Jota On Code AngularJs MVC vs ReactJs Flux
+headline: AngularJs MVC vs ReactJs Flux
+github: https://github.com/jotaoncode/directory-app-angular
+date: 2016-02-21 10:01:46-0700
+description: This is my opinion about AngularJs MVC vs ReactJs Flux.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+        AngularJs MVC vs ReactJs Flux
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+      This my personal comparison about AngularJs MVC and ReactJs Flux. I know that many of this two can not be compared, but in this chase I can see that there are several changes on board that would impact the way we develop.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Angularjs MVC and Reactjs flux, projects
+    </h4>
+    <p>
+      In order to make the comparison I just wrote a little of code for both of them. The code of both projects actually solves the same problem :).
+    </p>
+    <p>
+      The project is a list of directors that you can access to the director detail you need.
+      Also in order to see a bit more about flux vs MVC I just wrote an operation that will change the list of directors for both cases.
+    </p>
+    <p>
+      We can see both projects here:
+    </p>
+    <div layout="row">
+      <div flex="50">
+        <a target="_blank" href="https://github.com/jotaoncode/directory-app-angular">Github Directory App AngularJs</a>
+      </div>
+      <div  flex="50">
+        <a target="_blank" href="https://github.com/jotaoncode/directory-app-react">Github Directory App ReactJs</a>
+      </div>
+    </div>
+    <div layout="row">
+      <div flex="50">
+        <a target="_blank" href="http://jotaoncode.herokuapp.com/directory-app-angular">Directory App AngularJs</a>
+      </div>
+      <div  flex="50">
+        <a target="_blank" href="http://jotaoncode.herokuapp.com/directory-app-react">Directory App ReactJs</a>
+      </div>
+    </div>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Angular Js, directory application
+    </h4>
+    <p>
+      In this case using an MVC approach with angular we can see the following approach to solve this application.
+    </p>
+    <p>
+      First the folder structure is this one:
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/AngularJsDirectoryAppFolders.png" | prepend: site.baseurl }}" alt="Folder structure for an angularjs application" itemprop="url">
+    </div>
+    <p>
+      MVC basic diagram:
+    </p>
+    <div class="centered-image">
+      <img class="half-width" src="{{ "images/MVC-diagram.png" | prepend: site.baseurl }}" alt="MVC diagram" itemprop="url">
+    </div>
+    <p>
+      We can see somethings here. In order to solve the problem we created an application that will call the Directors Ctrl when certain route happens, and will call Director Detail Control in other cases.
+    </p>
+    <p>
+      Calling each controller will actually load a certain template that will show the list of directors or the detail of a certain director. I always load the same director detail for more simplicity, and I don't have any backend it is all solved in the front end.
+    </p>
+    <p>
+      We can have a directive for tables that will load some content, in order to show the list of directors. Those directors will be in directors.json.
+    </p>
+    <p>
+      Lets go a bit further, we created some directives that extends naturally HTML and add our own logic and needs in order to solve problems in a very declarative way. When you click on the name or any content you can go to the details of that director.
+    </p>
+    <p>
+      We have the model directors.json that feeds the list and the director.json that feed the detail of the director view. Both loaded in a variable that represents our model in the controller.
+    </p>
+    <p>
+      We can update the content variable or the director detail and it will automatically load the list view or the detail view. This is because angular offers a two way data binding between the view and the model, you can avoid this mechanism if you want. In some cases it could help or not this is a decision on how you take problems to be solved.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      React Js, directory application
+    </h4>
+    <p>
+      In this other case we are going to be working with react components. ReactJs with a Flux architecture offers another approach to work with this problem.
+    </p>
+    <p>
+      First the folder structure is this one:
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/ReactJsDirectoryAppFolders.png" | prepend: site.baseurl }}" alt="Folder structure for an reactjs application" itemprop="url">
+    </div>
+    <p>
+      Here is the diagram in order to understand about Flux architecture:
+    </p>
+    <div class="centered-image">
+      <img class="half-width" src="{{ "images/flux-diagram.png" | prepend: site.baseurl }}" alt="Flux diagram" itemprop="url">
+    </div>
+    <p>
+      So here is another type of file structure and also this is not just javascript. If you take any of this files and put in the browser by saying it is just javascript without any transformation it will fail to load correctly.
+    </p>
+    <p>
+      Also in this case we don't see any controllers or views. We have another way to solve this problem as you can see those react.js files in the components folder, will work similarly to a view-controller.
+    </p>
+    <p>
+      The component will actually return the definition of our view in the render method. Also there is an state of the component, everything in this react application is a component.
+    </p>
+    <p>
+      Going to a route will actually be handled by a component in the main markup that will be loading our components in the way we need.
+    </p>
+    <p>
+      Solving our problem of directory application, will go trough creating a those components that extends also HTML in order to bring solution to our needs with custom components.
+    </p>
+    <p>
+      Also this components will be working along with the state of each component, between components you can set properties and also make references in order to communicate your needs.
+    </p>
+    <p>
+      There is no model here, there is something else, when you need some information to feed those states or properties showing, you will call an Action.
+    </p>
+    <p>
+      Those actions are in the actions folder, the dispatcher will be called in order to say to the store those needs we have. The dispatcher is actually a hub to the application that resolves to the store of our needs.
+    </p>
+    <p>
+      When the store changes our components will be noticed, the main reason is that the components and the stores are binded together by an Event Emitter that handles those changes of state, so on change our components will actually be noticed and react to our needs.
+    </p>
+    <p>
+      Removing a director in our list of directors, will actually call an action, that action will be dispatched to our store, and that store will actually solve our business logic in order to inform the latest state for our components. Those components will react to this state change in the way they want.
+    </p>
+    <p>
+      So here we see another approach with stores / actions / components, this architecture is called Flux. It is another way to solve problems, and the creators of this ideas say's it actually solves in a more mantainable way than MVC for certain projects.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Conclusion
+    </h4>
+    <p>
+      You can see there are two different ways on solving the same project, I think that for certain projects MVC could be a good idea for other projects Flux is good idea.
+    </p>
+    <p>
+      Also we see a little bit more about angular directives, controllers, views and routing. And react components, actions, stores, and routing.
+    </p>
+    <p>
+      Lets think on trying to expand both projects. In the case solved by angular you will include new directives with their views and models with the two way databindings. In the case of react you will be thinking on new components, those components will be working with actions that are dispatched to the store in order to solve certain logic and change the state of the components.
+    </p>
+    <p>
+      There is problem with MVC approach when expanding you will be working with a controller that will be actually controlling many models and those models will be working with many views, back and forward to the model and the view solving certain problems. This structure on big projects starts to be a problem, and the maintenance of the product gets harder.
+    </p>
+    <p>
+      The Flux approach with React, will be working with certain components that have an state. Calling an action will say to the store something should happen, and the store with his own logic will update the views. Everything goes trough actions and stores in only one direction.
+    </p>
+    <p>
+      Flux tries to tackle the cascading updates that can be produced by changing certain values on a model , it works with same data flow direction in all the application.
+    </p>
+    <p>
+      I think Flux is pretty much interesting, but many things will keep on being handle by MVC for smaller projects. There had been many approachs MVC, MVP, MVVM, MV*, Flux, when an architect choose one of this options on solving a certain problem is because he believes it will be the best approach to solve something, this means he has to had the vision to see the project as a extandable product for the future.
+    </p>
+    <p>
+      Flux is an architecture tought to bring a simple flow to data in an application. There is something else that actually calls my attention, the concept of state in components, I think this state is a very clear way to work with very testeable components.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      References
+    </h4>
+    <p>
+      Flux site and architecture explanation
+      <a href="https://facebook.github.io/flux/docs/overview.html"> Flux Architecture</a>
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI<i class="fa fa-chevron-right"></i></a>
+</div>
