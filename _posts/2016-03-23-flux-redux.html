@@ -1,0 +1,161 @@
+---
+layout: post
+category: news
+title: Jota On Code Flux and Redux
+headline: Flux and Redux
+github: https://github.com/jotaoncode/directory-app-react-redux
+date: 2016-02-21 10:01:46-0700
+description: An opinion after some reading and practice on react flux and redux.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+        Flux and Redux
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+      This is my personal opinion regarding Flux and Redux. This will bring to light those key values of Redux, and how they are working with Flux in my opinion.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Practice on both cases.
+    </h4>
+    <p>
+      In order to make the comparison I just wrote a little of code for both of them. The code of both projects actually solves the same problem :).
+    </p>
+    <p>
+      The project is a list of directors that you can access to the director detail you need.
+    </p>
+    <p>
+      We can see both projects here:
+    </p>
+    <div layout="row">
+      <div flex="50">
+        <a target="_blank" href="https://github.com/jotaoncode/directory-app-react-redux">Github Directory App ReactJs REdux</a>
+      </div>
+      <div  flex="50">
+        <a target="_blank" href="https://github.com/jotaoncode/directory-app-react">Github Directory App ReactJs Flux</a>
+      </div>
+    </div>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Flux
+    </h4>
+    <p>
+      In this other case we are going to be working with react components. ReactJs with a Flux architecture offers another approach to work with this problem.
+    </p>
+    <p>
+      First the folder structure is this one:
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/ReactJsDirectoryAppFolders.png" | prepend: site.baseurl }}" alt="Folder structure for an reactjs application" itemprop="url">
+    </div>
+    <p>
+      Here is the diagram in order to understand about Flux architecture:
+    </p>
+    <div class="centered-image">
+      <img class="half-width" src="{{ "images/flux-diagram.png" | prepend: site.baseurl }}" alt="Flux diagram" itemprop="url">
+    </div>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Redux
+    </h4>
+    <p>
+      In this case, redux has the same folder structure as the one presented by Flux, although it has a little change. Now it has a folder called reducers instead of storages.
+    </p>
+    <p>
+      To me redux seems to have some good things and some particularities that cames to my head when I was developing.
+    </p>
+    <p>
+      In the first impression after watching those 30 videos from Dan, I thought about that kind of simplicity on solving problems is the one that make us happy in our day by day as developers.
+    </p>
+    <p>
+      Also during this redux learning I had to deal with some new things. React router, this router brings a lot to the developer, and you will find that there are many options like react-redux-router and others. I just used one, and in this case with browser history as strategy, in other frameworks I always used hash strategy so in order to learn something new I just tried that one.
+    </p>
+    <p>
+      Writing about Redux actually makes me feel very close to Ecma 6 / 7. It is great experience!.
+    </p>
+    <p>
+      Lets go a bit further and think about what redux brings to me:
+    </p>
+    <h4>Pros</h4>
+    <ol>
+      <li>Simple and Declarative</li>
+      <li>Guidance</li>
+      <li>Communications</li>
+      <li>Preventive</li>
+    </ol>
+    <h5>Simple and Declarative</h5>
+    <p>Looking at how things are solved in those 30 videos of Dan Abramov is inspiring on looking many times the same code to solve the problem in a more clear way. All of this redux idea brings to light a lot of techniches from Dan Abramov to do things easier and simple, like presentation objects, and separation of concerns.</p>
+    <h5>Guidance</h5>
+    <p>Working with react Flux brings a lot of different tools to work with. I felt like redux brings some kind of guidance on how to solve a problem in a particular way, we will go further on this in the following points like in the cons of redux. I beleive this gives a ground on where to go for redux as a solution, so I found guidance here.</p>
+    <h5>Communications</h5>
+    <p>One of the points that Redux talks about is communication between components and separations of concerns. For example, the structure that comes to my mind when thinking in a redux solution would be a tree of components where the containers of an application says to the child what to do. This comes with Flux too, but Dan showed me in those 30 videos how to delegate from a container to a component my needs to be solved. I just called Communication in lake of a better name to say so.</p>
+    <h5>Preventive</h5>
+    <p>Having a few talks with some of my collegues about flux, we have a discussion about communications and states, and how all this flux thing would actually not get inestable on biggers applications without taking care on some aspects that matters to a good developing practice.</p>
+    <p>Redux brings to light the concept of pure functions and inmutable states to his solution to problems. I feel this as a preventive thing to reach in biggers applications where every component could actually have an state setted by some information in a storage, I feel there could be some cases where inestability could come if we don't have carefull on our decisions with the state.</p>
+    <h4>Cons</h4>
+    <ol>
+      <li>Abstractions and Green</li>
+      <li>Pure Functions</li>
+      <li>Libraries</li>
+    </ol>
+    <h5>Abstractions and Green</h5>
+    <p>May be because I was learning about ECMA 6 / 7 and jsx in the same time, but with so many Abstractions that all this brings I found many errors that happens in my code without any good signal on what was going on. This is hard for beginners, because they step on those little problems like missing a typo or very small things that does not have anything to do with the main problem they are solving</p>
+    <p>I know that react components life cycle is plain simple and that jsx is also simple, but it would be great to have some sort of help bringing as clear as possible little problems or details a developer come accross. Although many of this is being worked with tools like the google developers tool for react. If you have any other tools thanks in advance XD.</p>
+    <h5>Pure Functions</h5>
+    <p>As we said Inmutable States also serve as a prevention to solve problems. But I beleive there would be ocassions where having inmutable states would not solve for certain problems. Also thinking on inmutable states makes me think I have to be very close to free listeners on the unmount of a component and see that those states will not be having any other reference in memory, having a good profiling on big react applications would be great in order to bring to light those key value points on unmounting or taking care of states.</p>
+    <h5>Libraries</h5>
+    <p>This is something we have to take care too, everything in the ecosystem of redux is inmutable by definition. So if you go for Redux, no library messing around with your state, thats not a big problem, but is to pay attention.</p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Conclusion
+    </h4>
+    <p>
+      Redux is a nice point of view in order to solve many problems with Flux in my case, and I beleive it brings of simplicity and concepts to be clarified in a team before working in order to solve problems in the best way possible.
+    </p>
+    <p>
+      I know Redux will grow a lot and will bring key values to development of the day by day of any web developer, I am glad to learnt about it and it will be in the first line when thinking on my next developments.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      References
+    </h4>
+    <p>
+      Flux site and architecture explanation
+      <a href="https://facebook.github.io/flux/docs/overview.html"> Flux Architecture</a>
+    </p>
+    <p>
+      Redux 30 videos. Highly recommend to start here :).
+      <a href="https://egghead.io/lessons/javascript-redux-react-counter-example"> Dan Abramov videos</a>
+    </p>
+    <p>
+      React-router. I just used browserHistory, but there is a lot going on out there about routing, so I will post two others.
+      <a href="https://github.com/reactjs/react-router"> React Router </a>
+      Here is the React-Router-Redux XD
+      <a href="https://github.com/reactjs/react-router-redux"> React Redux Router </a>
+      And here is another one! Redux-Router
+      <a href="https://github.com/acdlite/redux-router"> Redux Router </a>
+    </p>
+    <p>
+      As a boiler plate I just go through:
+      <a href="https://github.com/anorudes/redux-easy-boilerplate"> Redux easy boilerplate</a>
+      I know that using a boiler plate as a first instance is not the best. But as I knew a bit about webpack and this is making those configurations for Redux in a very simple and nice way I just decided to use it and learnt from it.
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI<i class="fa fa-chevron-right"></i></a>
+</div>
