@@ -97,13 +97,13 @@ description: An opinion after some reading and practice on react flux and redux.
       <li>Preventive</li>
     </ol>
     <h5>Simple and Declarative</h5>
-    <p>Looking at how things are solved in those 30 videos of Dan Abramov is inspiring on looking many times the same code to solve the problem in a more clear way. All of this redux idea brings to light a lot of techniches from Dan Abramov to do things easier and simple, like presentation objects, and separation of concerns.</p>
+    <p>Looking at how things are solved in those 30 videos of Dan Abramov is inspiring. All of this redux idea brings to light a lot of techniches from Dan Abramov to do things easier and simple, like presentation objects, and separation of concerns.</p>
     <h5>Guidance</h5>
     <p>Working with react Flux brings a lot of different tools to work with. I felt like redux brings some kind of guidance on how to solve a problem in a particular way, we will go further on this in the following points like in the cons of redux. I beleive this gives a ground on where to go for redux as a solution, so I found guidance here.</p>
     <h5>Communications</h5>
     <p>One of the points that Redux talks about is communication between components and separations of concerns. For example, the structure that comes to my mind when thinking in a redux solution would be a tree of components where the containers of an application says to the child what to do. This comes with Flux too, but Dan showed me in those 30 videos how to delegate from a container to a component my needs to be solved. I just called Communication in lake of a better name to say so.</p>
     <h5>Preventive</h5>
-    <p>Having a few talks with some of my collegues about flux, we have a discussion about communications and states, and how all this flux thing would actually not get inestable on biggers applications without taking care on some aspects that matters to a good developing practice.</p>
+    <p>Having a few talks with some of my collegues about flux, we have a discussion about communications and states, and how all this flux thing would actually be stable enough in biggers applications without taking care on some aspects that matters to a good developing practice.</p>
     <p>Redux brings to light the concept of pure functions and inmutable states to his solution to problems. I feel this as a preventive thing to reach in biggers applications where every component could actually have an state setted by some information in a storage, I feel there could be some cases where inestability could come if we don't have carefull on our decisions with the state.</p>
     <h4>Cons</h4>
     <ol>
@@ -116,6 +116,9 @@ description: An opinion after some reading and practice on react flux and redux.
     <p>I know that react components life cycle is plain simple and that jsx is also simple, but it would be great to have some sort of help bringing as clear as possible little problems or details a developer come accross. Although many of this is being worked with tools like the google developers tool for react. If you have any other tools thanks in advance XD.</p>
     <h5>Pure Functions</h5>
     <p>As we said Inmutable States also serve as a prevention to solve problems. But I beleive there would be ocassions where having inmutable states would not solve for certain problems. Also thinking on inmutable states makes me think I have to be very close to free listeners on the unmount of a component and see that those states will not be having any other reference in memory, having a good profiling on big react applications would be great in order to bring to light those key value points on unmounting or taking care of states.</p>
+    <p>
+      I know that state should be serializable, and there should not be many problems about garbage collections. But I beleive there should be some other precausions to be taken care or analyzed if you go a bit further on bigger apps with inmutable states and history about them.
+    </p>
     <h5>Libraries</h5>
     <p>This is something we have to take care too, everything in the ecosystem of redux is inmutable by definition. So if you go for Redux, no library messing around with your state, thats not a big problem, but is to pay attention.</p>
   </section>
@@ -127,7 +130,7 @@ description: An opinion after some reading and practice on react flux and redux.
       Redux is a nice point of view in order to solve many problems with Flux in my case, and I beleive it brings of simplicity and concepts to be clarified in a team before working in order to solve problems in the best way possible.
     </p>
     <p>
-      I know Redux will grow a lot and will bring key values to development of the day by day of any web developer, I am glad to learnt about it and it will be in the first line when thinking on my next developments.
+      I know Redux will grow a lot and will bring key values to development of the day by day of any web developer, I am glad to learnt about it, and it will be in the first line when thinking on my next developments.
     </p>
   </section>
   <section itemprop="articleSection">
