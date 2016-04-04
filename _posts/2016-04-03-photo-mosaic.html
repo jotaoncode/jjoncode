@@ -1,0 +1,79 @@
+---
+layout: post
+category: projects
+title: Jota On Code Photo Mosaic
+headline: Photo Mosaic
+github: https://github.com/jotaoncode/photo-mosaic
+external: http://jotaoncode.herokuapp.com/photo-mosaic/mosaic.html
+description: A canvas experiment for making mosaics in the browser, from a provided user image.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+      Photo Mosaic
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+    <h4 itemprop="headline">
+      Objectives
+    </h4>
+    <p>
+      This application is in order to learnt about Canvas. In this case I will be provided with a photo, I will separate in tiles the photo, take the average color from each tile and show an svg in order to make a composite.
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/PhotoMosaic.png" | prepend: site.baseurl }}" alt="How the application photo mosaic produce results" itemprop="image">
+    </div>
+    <p>
+      As you can see the user just selected a file, and then press on create mosaic in order to get a mosaic composition per tile with the average color.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="headline">
+      How did I work with the images?
+    </h4>
+    <p>
+      First I just take the initial picture from the file with FileReader of HTML5.
+    </p>
+    <p>
+      Then I just use this as source for a canvas not visible for the user.
+    </p>
+    <p>
+      In this canvas I just separate each tile with a configuration parameter WIDTH HEIGHT.
+    </p>
+    <p>
+      Then I just take from each tile an average color, this is provided by a canvas context function called. Get Image Data, this function is great it gives an array with all the image data in the section of the context canvas written per tile.
+    </p>
+    <p>
+      So Get Image Data brings an array that works by 4 positions bringing the values of RGBA, so per each 4 position you can get an average of each color.
+    </p>
+    <p>
+      Thats all you just need to write a canvas. So I get a template svg in order to bring a little circle to it with the average color, it could be something else but this is fine.
+    </p>
+    <p>
+      Finally I just placed the original image as a background of the canvas in order to bring the composition.
+    </p>
+
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="headline">
+      Conclusion
+    </h4>
+    <p>
+      Learned about Canvas and Image processing bringing to light common used functions in order to manipulate those images.
+    </p>
+    <p>
+      All of this is with vanilla javascript.
+    </p>
+    <p>
+      The repo for this application is <a target="_blank" href="https://github.com/jotaoncode/photo-mosaic">here</a>
+    </p>
+    <p>
+      The application deployed is <a target="_blank" href="http://jotaoncode.herokuapp.com/photo-mosaic/mosaic.html">here</a>
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a></div>
+</div>
