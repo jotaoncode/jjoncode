@@ -1,0 +1,111 @@
+---
+layout: post
+category: news
+title: Jota On Code Angular Code Distribution
+headline: Angular Code Distribution
+github: https://github.com/jotaoncode/angular-basic-blog-spa
+date: 2016-05-29 10:01:46-0700
+description: Another option on code distribution for an angular SPA.
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+        Angular Code Distribution
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+      I have seen many different opinions about code distribution in a proyect. In this case I would like to present one more option to those out there. I would like to present the two basic ones and another option in order to make a comparison on each case.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      First case
+    </h4>
+    <p>
+      We can see that the most common code distribution for simple projects is this one.
+    </p>
+    <p>
+      <img class="half-width" src="{{ "images/first-distribution.png" | prepend: site.baseurl }}" alt="First Distribution" itemprop="url">
+    </p>
+    <p>
+      The project in this case will be an angular module that will be in app.js. We can see that there will be some controllers, directives, filters and services associated to the application module.
+    </p>
+    <p>
+      This is a very fast approach for solving simple things and in order to bring some learning is a good approach too.
+    </p>
+    <p>
+      How much of this are we going to reuse for other purposes? Well we can reuse things like directives / services / filters... inside of the project.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Second case
+    </h4>
+    <p>
+      This is another approach of an angular project, separated by modules of the application.
+    </p>
+    <p>
+      <img class="half-width" src="{{ "images/second-case.png" | prepend: site.baseurl }}" alt="Second case" itemprop="url">
+    </p>
+    <p>
+      This project have modules related to different parts on the system, making a separation of concerns in modules.
+    </p>
+    <p>
+      This approach is an interesting one, as playing around with a module will affect that module if there is less coapling and high cohesive code.
+    </p>
+    <p>
+      How much of this are we going to reuse for other purposes? Well we can try to have some things in commons for those things we could reuse inside the project.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Third case
+    </h4>
+    <p>
+      This is the another approach. We can see the following folder structure.
+    </p>
+    <p>
+      <img class="half-width" src="{{ "images/third-case.png" | prepend: site.baseurl }}" alt="Third case" itemprop="url">
+    </p>
+    <p>
+      Login and Posts are modules. All the services and directives too. Why?
+    </p>
+    <p>
+      Well when we try to solve a problem for a proyect in this case we can think on the type of problem we have.
+    </p>
+    <p>
+      So when solving a problem related in an organization level for example a directive that could be use in other proyect we can go to the module of directives and add one more solution there.
+    </p>
+    <p>
+      Lets say our manager says, we need to reuse some of the things on the business rules you are applying here to another proyect. Then we can think on our service module a reusable unit.
+    </p>
+    <p>
+      In the case we really feel that those cases on reusability could happen, then it would be a matter of creating a another repo for services or ui directives adding versioning to those products. Services and UI directives would be vendors for other projects.
+    </p>
+    <p>
+      This is a nice approach on thinking to create a foundation that would be and homogeneus solution accross many projects.
+    </p>
+
+  </section>
+  <section>
+    <h3>Conclusion</h3>
+    <p>So there are different approach's related to how code distribution could be. The thing is to get the best code distribution for each problem</p>
+    <p>We can see that, thinking on what to do is how much do you want to reuse and why for each case.</p>
+    <p>
+      <a href="http://jotaoncode.herokuapp.com/angular-spa-blog/">Site working with third case</a>
+    </p>
+    <p>
+      <a href="https://github.com/jotaoncode/angular-basic-blog-spa">Git  with third case</a>
+    </p>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI<i class="fa fa-chevron-right"></i></a>
+</div>
