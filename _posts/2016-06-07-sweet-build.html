@@ -1,0 +1,96 @@
+---
+layout: post
+category: news
+title: Jota On Code Sweet Build
+headline: Sweet build
+github: https://github.com/jotaoncode/angular-basic-blog-spa
+date: 2016-06-07 10:01:46-0700
+description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watchify
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <div class="header-post-title">
+    <span  class="title-text">
+        Browserify, SourceMaps, Gulp-Watch, Watchify, Dependo
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="name">
+        Objectives
+      </h4>
+      <p>
+      Try some tools for fast development, and trace dependencies in a project.
+      </p>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="name">
+      Tools
+    </h4>
+    <p>
+      <div class="row">
+        <div class="col s2 m2 l2">
+          <strong>Browserify</strong>
+        </div>
+        <div class="col s8 m8 l8">
+          <p>Allows to require dependencies from npm to the browser, by default CommonJs, bundling up as you need... and more.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2 m2 l2">
+          <strong>Source Maps</strong>
+        </div>
+        <div class="col s8 m8 l8">
+          <p>Maps the source code, introduced with HTML5</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2 m2 l2">
+          <strong>Dependo</strong>
+        </div>
+        <div class="col s8 m8 l8">
+          <p>Trace dependencies for CommonJs, AMD, ECMA2015 modules</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2 m2 l2">
+          <strong>Gulp-Watch</strong>
+        </div>
+        <div class="col s8 m8 l8">
+          <p>Gulp as a task manager, provides a watcher of source code changes to trigger your own tasks.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2 m2 l2">
+          <strong>Watchify</strong>
+        </div>
+        <div class="col s8 m8 l8">
+          <p>Rebundle code with browserify using cache to produce small changes.</p>
+        </div>
+      </div>
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h3>Conclusions</h3>
+    <ol>
+      <li>Live reload when creating things.</li>
+      <li>No need for bower, npm can do it.</li>
+      <li>Synchronize many devices /  to see how the impact of our changes are working</li>
+      <li>Track dependencies in the project, commonjs / amd / Ecma2015.</li>
+      <li>See local code and debug it, even after minification.</li>
+    </ol>
+    <p>
+      Here are the implementations of this tools for a simple blog. The values are fake, just in order to work with the front end.
+    </p>
+    <div layout="row">
+      <div flex="50">
+        <a target="_blank" href="https://github.com/jotaoncode/angular-basic-blog-spa">Github to sweet build</a>
+      </div>
+    </div>
+    <br>
+  </section>
+  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI<i class="fa fa-chevron-right"></i></a>
+</div>
