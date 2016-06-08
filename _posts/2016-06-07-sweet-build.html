@@ -12,7 +12,7 @@ description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watch
     <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
   <div class="header-post-title">
     <span  class="title-text">
-        Browserify, SourceMaps, Gulp-Watch, Watchify, Dependo
+        Sweet build
     </span>
   </div>
 </h2>
@@ -72,12 +72,27 @@ description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watch
       </div>
     </p>
   </section>
+  <section>
+    <h3>Dependo</h3>
+    <p>
+      This are the results on creating the diagram of dependo for an angular application.
+    </p>
+    <div class="centered-image">
+      <img src="{{ "images/Dependo.png" | prepend: site.baseurl }}" alt="Dependo diagram" itemprop="url">
+    </div>
+    <p>
+      In this case we can say, that the application works with controllers for login and posts.
+    </p>
+    <p>
+      Also we can see that there are to other modules, blog core and ui blog, those modules will handle services and directives that are reusable for some of the controllers of the blog.
+    </p>
+  </section>
   <section itemprop="articleSection">
     <h3>Conclusions</h3>
     <ol>
       <li>Live reload when creating things.</li>
       <li>No need for bower, npm can do it.</li>
-      <li>Synchronize many devices /  to see how the impact of our changes are working</li>
+      <li>Synchronize many devices / browsers to see how the impact of our changes are working</li>
       <li>Track dependencies in the project, commonjs / amd / Ecma2015.</li>
       <li>See local code and debug it, even after minification.</li>
     </ol>
