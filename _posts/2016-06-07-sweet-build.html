@@ -72,7 +72,7 @@ description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watch
       </div>
     </p>
   </section>
-  <section>
+  <section itemprop="articleSection">
     <h3>Dependo</h3>
     <p>
       This are the results on creating the diagram of dependo for an angular application.
@@ -88,6 +88,33 @@ description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watch
     </p>
   </section>
   <section itemprop="articleSection">
+    <h3>Gulp-watch and Watchify</h3>
+    <p>
+      Gulp watch can handle all of the updates related to assets, markup, and sass.
+    </p>
+    <p>
+      Watchify can handle updates on the javascript source code.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h3>Browser Sync</h3>
+    <p>
+      This is a task that trigger every time gulp watch says.
+    </p>
+    <p>
+      Changes in assets, images, sass or js being watched trigger this task.
+    </p>
+  </section>
+  <section itemprop="articleSection">
+    <h3>Watchify</h3>
+    <p>
+      For javascript substack created a little module called watchify. It works as browserify, makes the bundle with those changes.
+    </p>
+    <p>
+      This watchify have some improvements on performance using memory cache to track small changes.
+    </p>
+  </section>
+  <section itemprop="articleSection">
     <h3>Conclusions</h3>
     <ol>
       <li>Live reload when creating things.</li>
@@ -97,7 +124,7 @@ description: Building tools - Browserify, SourceMaps, Dependo, Gulp-Watch, Watch
       <li>See local code and debug it, even after minification.</li>
     </ol>
     <p>
-      Here are the implementations of this tools for a simple blog. The values are fake, just in order to work with the front end.
+      Here are the implementations of this tools for a simple blog. The comments and posts are fake, just in order to work with the front end.
     </p>
     <div layout="row">
       <div flex="50">
