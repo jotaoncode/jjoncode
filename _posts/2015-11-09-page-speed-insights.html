@@ -8,8 +8,8 @@ description: How to measure and make a better performance web page with page spe
 ---
 <h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="header-post-links">
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
   <div class="header-post-title">
     <span  class="title-text">
       Page Speed Insights
@@ -137,13 +137,13 @@ require('load-grunt-tasks')(grunt);
       You should see a report like this one:
     </p>
     <div class="centered-image">
-      <img src="{{ "images/pagespeed-before.png" | prepend: site.baseurl }}" alt="Picture of page speed insights before performance changes" itemprop="url">
+      <img src="{{ "images/pagespeed-before.png" | prepend: site.url }}" alt="Picture of page speed insights before performance changes" itemprop="url">
     </div>
     <p>
       We can measure a bit more with <a href="www.webpagetest.org">web page test</a>. Then we can see this results too:
     </p>
     <div class="centered-image">
-      <img src="{{ "images/webpagetest-before.png" | prepend: site.baseurl }}" alt="Picture of web page test before performance changes" itemprop="url">
+      <img src="{{ "images/webpagetest-before.png" | prepend: site.url }}" alt="Picture of web page test before performance changes" itemprop="url">
     </div>
   </section>
   <section class="content-container" itemprop="articleSection">
@@ -155,7 +155,7 @@ require('load-grunt-tasks')(grunt);
       If we see a bit more over the results of web page test. We can actually see that there is a waterfall chart in order to see how resources are processed and loaded on my page.
     </p>
     <div class="centered-image">
-      <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.baseurl }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="url">
+      <img src="{{ "images/webpagetest-chart-before.png" | prepend: site.url }}" alt="Picture of web page test waterfall chart before performance changes" itemprop="url">
     </div>
     <p>
       Some resources you can see for web performance are:
@@ -229,13 +229,13 @@ require('load-grunt-tasks')(grunt);
       The results on my report are:
     </p>
     <div class="centered-image">
-      <img src="{{ "images/pagespeed-after.png" | prepend: site.baseurl }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="image">
+      <img src="{{ "images/pagespeed-after.png" | prepend: site.url }}" alt="Page speed results for page speed insights after performance changes to the site." itemprop="image">
     </div>
     <p>
       The results on www.webpagetest.com are:
     </p>
     <div class="centered-image">
-      <img src="{{ "images/webpagetest-after.png" | prepend: site.baseurl }}" alt="Page speed results for web page test after performance changes to the site." itemprop="image">
+      <img src="{{ "images/webpagetest-after.png" | prepend: site.url }}" alt="Page speed results for web page test after performance changes to the site." itemprop="image">
     </div>
     <p>
       So we can say the following:
@@ -298,6 +298,6 @@ require('load-grunt-tasks')(grunt);
       The code used for this example is in this repo: <a href="https://github.com/jotaoncode/page-speed-test">here</a>
     </p>
   </section>
-  <a href="{{ site.baseurl }}"><i class="fa fa-chevron-left"></i> Home</a>
-  <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
+  <a href="{{ site.url }}"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}" class="right link-navigation">Browser Testing <i class="fa fa-chevron-right"></i></a>
 </div>

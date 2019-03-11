@@ -8,8 +8,8 @@ description: Travis Continuous Integration with Saucelabs and Coveralls
 ---
 <h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="header-post-links">
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2016/02/21/angularjs-and-reactjs/" | prepend: site.baseurl }}" class="right link-navigation">AngularJs MVC and ReactJs Flux<i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2016/02/21/angularjs-and-reactjs/" | prepend: site.url }}" class="right link-navigation">AngularJs MVC and ReactJs Flux<i class="fa fa-chevron-right"></i></a>
   <div class="header-post-title">
     <span  class="title-text">
       Continuous Integration Travis and Github
@@ -52,8 +52,8 @@ description: Travis Continuous Integration with Saucelabs and Coveralls
     </h4>
     <p>
       I highly recommend looking to this posts before going to travis.
-      <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" target="_blank" > Browser testing</a>,
-      <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" target="_blank">Saucelabs device testing</a>
+      <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}" target="_blank" > Browser testing</a>,
+      <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.url }}" target="_blank">Saucelabs device testing</a>
     </p>
   </section>
   <section itemprop="articleSection">
@@ -70,8 +70,8 @@ description: Travis Continuous Integration with Saucelabs and Coveralls
   "coveralls": "cat coverage/lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
 }
 {% endhighlight %}
-    <p>So we have a test that runs our local like explained in <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}" target="_blank"> Browser testing</a></p>
-    <p>We have test-sl <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" target="_blank"> for saucelabs</a></p>
+    <p>So we have a test that runs our local like explained in <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}" target="_blank"> Browser testing</a></p>
+    <p>We have test-sl <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.url }}" target="_blank"> for saucelabs</a></p>
     <p>CI is for running both of them</p>
     <p>And there is one more I added, <strong>coveralls</strong>. I recommend adding it too, you just need to login <a href="https://coveralls.io" target="_blank">coveralls</a>, and just add the repository you need to get a badge on the coverage you have for that project. We will go further on coverall soon.</p>
     <p>This is just a flavour, I like to run those things I need with gulp for the day by day programming, and for building a version for each environment, production, testing, develop, with jshint / jscs, testing etc... But there are some things that needs to run in a post integration matter that are very expensive to be running all the time. So those things can actually be done by travis, saucelabs.</p>
@@ -144,24 +144,24 @@ after_success:
     </h4>
     <p>After so much work we can see the following results over travis:</p>
     <div class="centered-image">
-      <img src="{{ "images/travis-result-running1.png" | prepend: site.baseurl }}" alt="Travis running report 1" itemprop="url">
+      <img src="{{ "images/travis-result-running1.png" | prepend: site.url }}" alt="Travis running report 1" itemprop="url">
     </div>
     <p>After running all the gulp tasks, the end of travis report is:</p>
     <div class="centered-image">
-      <img src="{{ "images/travis-result-running2.png" | prepend: site.baseurl }}" alt="Travis running report 2" itemprop="url">
+      <img src="{{ "images/travis-result-running2.png" | prepend: site.url }}" alt="Travis running report 2" itemprop="url">
     </div>
     <p>We are happy to see that travis says everything goes alright</p>
     <div class="centered-image">
-      <img src="{{ "images/travis-build-results.png" | prepend: site.baseurl }}" alt="Travis results success" itemprop="url">
+      <img src="{{ "images/travis-build-results.png" | prepend: site.url }}" alt="Travis results success" itemprop="url">
     </div>
     <p>And in coveralls we can see the following:</p>
     <div class="centered-image">
-      <img src="{{ "images/coveralls-results.png" | prepend: site.baseurl }}" alt="Coveralls results on success build of travis" itemprop="url">
+      <img src="{{ "images/coveralls-results.png" | prepend: site.url }}" alt="Coveralls results on success build of travis" itemprop="url">
     </div>
     <p>So now we know there is a lot to do! only 40% of my code is covered.</p>
     <p>We can inform in Github to everyone how this project is going.</p>
     <div class="centered-image">
-      <img src="{{ "images/github-badges.png" | prepend: site.baseurl }}" alt="Github badges representing the values of our build system." itemprop="image">
+      <img src="{{ "images/github-badges.png" | prepend: site.url }}" alt="Github badges representing the values of our build system." itemprop="image">
     </div>
   </section>
   <section itemprop="articleSection">
@@ -181,6 +181,6 @@ after_success:
       Finally why not adding performance test to the end of this chain? Well actually I invite you to see the post about page speed insights. You could add some performance automation if you want too.
     </p>
   </section>
-  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-  <a href="{{ "blog/news/2016/02/21/angularjs-and-reactjs/" | prepend: site.baseurl }}" class="right link-navigation">AngularJs MVC and ReactJs Flux <i class="fa fa-chevron-right"></i></a>
+  <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2016/02/21/angularjs-and-reactjs/" | prepend: site.url }}" class="right link-navigation">AngularJs MVC and ReactJs Flux <i class="fa fa-chevron-right"></i></a>
 </div>

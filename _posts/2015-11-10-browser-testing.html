@@ -8,8 +8,8 @@ description: Testing with mocha, phantomjs 2, karma, and coverage with istanbul.
 ---
 <h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="header-post-links">
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" class="right link-navigation">Saucelabs testing <i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.url }}" class="right link-navigation">Saucelabs testing <i class="fa fa-chevron-right"></i></a>
   <div class="header-post-title">
     <span  class="title-text">
       Browser Testing
@@ -180,15 +180,15 @@ browserify: {
     <code>rm -r coverage && karma start karma.local.conf.js</code>
     <p>the results on this coverage are in my terminal are this ones:</p>
     <div class="centered-image">
-      <img src="{{ "images/npm-test-results.png" | prepend: site.baseurl }}" alt="report written in terminal for karma coverage" itemprop="url">
+      <img src="{{ "images/npm-test-results.png" | prepend: site.url }}" alt="report written in terminal for karma coverage" itemprop="url">
     </div>
     <p>the results on this coverage in my browser are:</p>
     <div class="centered-image">
-      <img src="{{ "images/coverage-report.png" | prepend: site.baseurl }}" alt="html report for coverage" itemprop="url">
+      <img src="{{ "images/coverage-report.png" | prepend: site.url }}" alt="html report for coverage" itemprop="url">
     </div>
     <p>we can explore those results a bit more and find the lines not covered</p>
     <div class="centered-image">
-      <img src="{{ "images/index-coverage.png" | prepend: site.baseurl }}" alt="html report for coverage for index" itemprop="image">
+      <img src="{{ "images/index-coverage.png" | prepend: site.url }}" alt="html report for coverage for index" itemprop="image">
     </div>
   </section>
   <section itemprop="articlesection" class="content-container">
@@ -197,8 +197,8 @@ browserify: {
     </h4>
     <p>now we know how to run our testing with coverage in a headless browser. there are several reasons why testing is important, soon we will see a nice approach in this same project with continuous integration, github and for multiple platforms.</p>
     <p>hope you enjoy this little sample, the repo with the code is <a href="https://github.com/jotaoncode/web-istanbul">here</a></p>
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> home</a>
-    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.baseurl }}" class="right link-navigation">saucelabs testing <i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> home</a>
+    <a href="{{ "blog/news/2015/11/13/saucelabs-device-testing/" | prepend: site.url }}" class="right link-navigation">saucelabs testing <i class="fa fa-chevron-right"></i></a>
   </div>
   </section>
 </div>

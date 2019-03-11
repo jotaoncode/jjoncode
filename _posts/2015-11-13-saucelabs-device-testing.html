@@ -8,8 +8,8 @@ description: Making Karma work with Saucelabs for testing in devices and browser
 ---
 <h2 class="primary-text-color title-content divider-color" itemprop="headline">
   <div class="header-post-links">
-    <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-    <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.url }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
   <div class="header-post-title">
     <span  class="title-text">
       Saucelabs Configuration
@@ -23,7 +23,7 @@ description: Making Karma work with Saucelabs for testing in devices and browser
       </h4>
       <p>
         We will see a bit of configuration from karma and an example of a working enviroment for testing and coverage.
-        This project is the same I am using for <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}"> browser testing</a> , but with integration to saucelabs. So we can make our tests run in different devices and browsers.
+        This project is the same I am using for <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}"> browser testing</a> , but with integration to saucelabs. So we can make our tests run in different devices and browsers.
         For impatients  you can find the repo <a href="https://github.com/jotaoncode/web-istanbul">here</a>
       </p>
       <p>
@@ -39,7 +39,7 @@ description: Making Karma work with Saucelabs for testing in devices and browser
     </h4>
     <p>
       In this case we need to have installed nodejs, npm, and karma, mocha, phantomjs and expect for assertion.
-      It would be nice that you already saw <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.baseurl }}"></a>this post that explains about karma configuration of this project.
+      It would be nice that you already saw <a href="{{ "blog/news/2015/11/10/browser-testing/" | prepend: site.url }}"></a>this post that explains about karma configuration of this project.
     </p>
   </section>
   <section itemprop="articleSection">
@@ -142,7 +142,7 @@ var cfg = {
       So running saucelabs from command line now will be. The same as running locally but with the configuration for saucelabs.
     </p>
     <code>$ karma start karma.saucelabs.conf.js</code>
-    <img src="{{ "images/testing.png" | prepend: site.baseurl }}" alt="Sauce labs reports for testing in some configurations" itemprop="image">
+    <img src="{{ "images/testing.png" | prepend: site.url }}" alt="Sauce labs reports for testing in some configurations" itemprop="image">
   </section>
   <section itemprop="articleSection">
     <h4 itemprop="headline">
@@ -152,6 +152,6 @@ var cfg = {
       At this moment we just created a nice environment to test what we need with mocha, karma, phantomjs, and then we just added some cross browsing tests with saucelabs. Whats next? We can tell someone else to run all this for us hang tight to your chair and read the next post for Continuous Integration and Github.
     </p>
   </section>
-  <a href="{{ site.baseurl }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
-  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.baseurl }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
+  <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+  <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.url }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
 </div>
