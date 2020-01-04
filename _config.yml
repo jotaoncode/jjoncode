@@ -5,13 +5,13 @@ description: > # this means to ignore newlines until "baseurl:"
     Thanks for visiting, I am an Information Systems Engineer that loves to learn new technologies, open minded, gratefull and humble I would like to help making internet a better place.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jotaoncode.com/" # the base hostname & protocol for your site
+url: "https://jotaoncode.com/" # the base hostname & protocol for your site
 twitter: "https://twitter.com/Juancho_1985_"
 linkedin: "https://ar.linkedin.com/in/garciajuanjose"
-stackoverflow: "http://careers.stackoverflow.com/juangarcia"
+stackoverflow: "https://careers.stackoverflow.com/juangarcia"
 github:  "https://github.com/jotaoncode"
 thingiverse: "https://www.thingiverse.com/Jota_1985/designs"
-youtubechannel: https://www.youtube.com/channel/UC3w8F2SQIkBg2UrwUkhx7pw
+youtubechannel: "https://www.youtube.com/channel/UC3w8F2SQIkBg2UrwUkhx7pw"
 production: false
 
 # Permalinks
