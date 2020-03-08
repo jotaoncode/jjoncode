@@ -1,0 +1,61 @@
+---
+layout: post
+category: framework
+title: Jota On Code Comparison ExpressJs vs FastifyJs
+headline: Comparison ExpressJs vs FastifyJs
+description: Comparison ExpressJs vs FastifyJs
+---
+<h2 class="primary-text-color title-content divider-color" itemprop="headline">
+  <div class="header-post-links">
+    <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+    <a href="{{ "blog/news/2015/11/14/travis-ci/" | prepend: site.url }}" class="right link-navigation">Travis CI <i class="fa fa-chevron-right"></i></a>
+  <div class="header-post-title">
+    <span  class="title-text">
+      Comparison ExpressJs vs FastifyJs
+    </span>
+  </div>
+</h2>
+<div class="content-container" itemprop="articleBody">
+  <section itemprop="articleSection">
+      <h4 itemprop="headline">
+        Objectives
+      </h4>
+      <p>
+        Comparison Express and Fastify frameworks, consider the use case for each framework.
+      </p>
+      <div style="text-align:center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kc_yPRcm7i8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </section>
+  <section itemprop="articleSection">
+    <h4 itemprop="headline">
+      Conclusion
+    </h4>
+    <p>
+      The both of them are great frameworks, summarizing the use cases for each one I would say that fastify:
+    </p>
+    <ul>
+      <li>Schema validation out of the box</li>
+      <li>This validation is a common factor in many APIs and this could help to provide a more homogeneus solution cross APIs</li>
+      <li>Claims to have a good performance in general, but I was not able to measure this point</li>
+      <li>Provides logging out of the box</li>
+      <li>Extensible using Hooks, but pay attention that this belongs to lifecycle and then any change in this regards could impact a product implementation</li>
+      <li>Extensible using Decorators, but pay attention to when and how to use them in each use case, in order to not have an impact in maintanability on the product</li>
+      <li>Extensible using Plugins, fastify claims to have a good community and source of plugins. This is a rich aspect.</li>
+      <li>Is developer friendly, because taking away common problems with configuration makes the develop to focus on solving particular needs of the business.</li>
+    </ul>
+    <p>
+      Express Js:
+    </p>
+    <ul>
+      <li>Very mature, first commit of this framework was in 2009</li>
+      <li>Huge community and middlewares that can help to solve common problems</li>
+      <li>Extensible using middlewares</li>
+      <li>In some use cases could have more work than fastify. I believe configs of fastify helps a lot here.</li>
+      <li>The same logs could be provided to Express as in fastifyJs</li>
+      <li>Very flexible and easy to use</li>
+      <li>So much flexibility can come with the need of extra effort to make things similar and homogeneus accross several APIs</li>
+    </ul>
+  </section>
+  <a href="{{ site.url }}" class="left link-navigation"><i class="fa fa-chevron-left"></i> Home</a>
+</div>
