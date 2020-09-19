@@ -13,6 +13,38 @@ layout: default-no-ad
   </p>
   <div class="col l6 m12 s12">
     <h3 class="primary-text-color title-content divider-color">
+      Languages
+    </h3>
+    <ul class="collapsible" data-collapsible="expandable">
+      {% for post in site.categories.language %}
+      <li>
+        <div class="collapsible-header open-container">
+          <small itemprop="headline center">
+            {{ post.headline }}
+          </small>
+          <div class="primary-text-color btn-link-header right">
+            <a class="fa fa-chevron-down"></a>
+          </div>
+        </div>
+        <div class="collapsible-body blue-grey lighten-5">
+          <small class="date-new primary-text-color right" itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">
+          {{ post.date | date: "%b %-d, %Y" }}
+          </small>
+          <p class="primary-text-color post-description" itemprop="description">
+            {{ post.description }}
+          </p>
+          <p class="project-link-index">
+            <a href="{{ post.url }}" class="stop-propagation" itemprop="url">
+              <i class="fa fa-book"></i> Read
+            </a>
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col l6 m12 s12">
+    <h3 class="primary-text-color title-content divider-color">
       Distributed systems
     </h3>
     <ul class="collapsible" data-collapsible="expandable">
@@ -75,38 +107,7 @@ layout: default-no-ad
       {% endfor %}
     </ul>
   </div>
-  <div class="col l6 m12 s12">
-    <h3 class="primary-text-color title-content divider-color">
-      Languages
-    </h3>
-    <ul class="collapsible" data-collapsible="expandable">
-      {% for post in site.categories.language %}
-      <li>
-        <div class="collapsible-header open-container">
-          <small itemprop="headline center">
-            {{ post.headline }}
-          </small>
-          <div class="primary-text-color btn-link-header right">
-            <a class="fa fa-chevron-down"></a>
-          </div>
-        </div>
-        <div class="collapsible-body blue-grey lighten-5">
-          <small class="date-new primary-text-color right" itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">
-          {{ post.date | date: "%b %-d, %Y" }}
-          </small>
-          <p class="primary-text-color post-description" itemprop="description">
-            {{ post.description }}
-          </p>
-          <p class="project-link-index">
-            <a href="{{ post.url }}" class="stop-propagation" itemprop="url">
-              <i class="fa fa-book"></i> Read
-            </a>
-          </p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+
   <div class="col l6 m12 s12">
     <h3 class="primary-text-color title-content divider-color">
       Other
